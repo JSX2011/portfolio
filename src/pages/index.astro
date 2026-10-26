@@ -1,0 +1,66 @@
+---
+import { projects } from '../data/projects';
+import '../styles.css';
+const base = import.meta.env.BASE_URL;
+---
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Portafolio de Juan Duque: inteligencia artificial local, herramientas de gestión y experiencias web. Explora proyectos, interfaces y su estado de desarrollo." />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#f5f3ed" />
+    <title>Juan Duque — Software con propósito</title>
+    <link rel="icon" href={`${base}favicon.svg`} type="image/svg+xml" />
+  </head>
+  <body>
+    <a class="skip" href="#contenido">Saltar al contenido</a>
+    <div class="review"><span class="review-dot"></span> VISTA PREVIA · PORTAFOLIO EN REVISIÓN <span class="review-right">Sin publicar</span></div>
+    <header class="site-header wrap">
+      <a href="#" class="brand" aria-label="Juan Duque, inicio">jd<span>·</span></a>
+      <nav aria-label="Navegación principal"><a href="#proyectos">Proyectos <span>06</span></a><a href="#sobre-mi">Sobre mí</a><a class="nav-contact" href="#contacto">Hablemos <span aria-hidden="true">↗</span></a></nav>
+    </header>
+    <main id="contenido">
+      <section class="hero wrap" aria-labelledby="titulo">
+        <div class="hero-top"><p class="eyebrow"><span class="tiny-cross">✳︎</span> JUAN DUQUE / DESARROLLO DE SOFTWARE</p><p class="hero-index">PORTAFOLIO<br />2025 — 2026</p></div>
+        <h1 id="titulo">Ideas que se<br />convierten en <em>software.</em><span class="hero-star" aria-hidden="true">✳︎</span></h1>
+        <div class="hero-bottom"><p>De una IA que vive en tu equipo a herramientas que mueven un negocio. Construyo soluciones para necesidades reales.</p><a class="round-link" href="#proyectos"><span>Explora mis proyectos</span><span class="circle" aria-hidden="true">↓</span></a></div>
+        <div class="hero-line"><span>IA LOCAL</span><span aria-hidden="true">/</span><span>APLICACIONES DE GESTIÓN</span><span aria-hidden="true">/</span><span>EXPERIENCIAS WEB</span><span class="line-end">DISEÑAR. CONSTRUIR. MEJORAR.</span></div>
+      </section>
+      <section id="proyectos" class="projects-section wrap" aria-labelledby="proyectos-titulo">
+        <div class="section-heading"><div><p class="eyebrow">01 / TRABAJO SELECCIONADO</p><h2 id="proyectos-titulo">Del concepto<br />a la interfaz<span>.</span></h2></div><p>Una selección de mis trabajos recientes.<br />Qué hacen, cómo están construidos<br />y en qué punto se encuentran.</p></div>
+        <div class="filter-bar"><div class="filters" role="group" aria-label="Filtrar proyectos"><button data-filter="all" aria-pressed="true">Todos <span>06</span></button><button data-filter="ia" aria-pressed="false">IA local</button><button data-filter="gestion" aria-pressed="false">Gestión</button><button data-filter="web" aria-pressed="false">Web y experiencias</button></div><span class="filter-count" role="status" aria-live="polite">6 proyectos</span></div>
+        <div class="project-grid">
+          {projects.map((p,i) => <article class="project-card" data-group={p.group}>
+            <a class="project-visual" href={`${base}proyectos/${p.id}/`} style={`--project-color: ${p.color}`} aria-label={`Ver proyecto ${p.name}`}>
+              <div class="visual-top"><span>{String(i+1).padStart(2,'0')} / {p.category}</span><span>{p.private ? '↳ PROYECTO PRIVADO' : '↗ CÓDIGO PÚBLICO'}</span></div>
+              <div class="screenshot-frame"><div class="browser-dots" aria-hidden="true"><i></i><i></i><i></i><span>{p.name}</span></div><img src={`${base}screenshots/${p.image}`} alt={`Captura de la interfaz de ${p.name}`} width="1440" height="900" loading={i<2 ? 'eager' : 'lazy'} /></div>
+              <span class="visual-arrow" aria-hidden="true">↗</span>
+            </a>
+            <div class="card-heading"><h3><a href={`${base}proyectos/${p.id}/`}>{p.name}</a></h3><span class:list={['status',p.status==='Alfa'||p.status==='Prototipo'?'status-amber':'']}><i></i>{p.status}</span></div>
+            <p class="card-title">{p.title}</p>
+            <div class="card-meta"><span>{p.stack.slice(0,3).join(' / ')}</span><span>{p.year}</span></div>
+          </article>)}
+        </div>
+        <p class="catalog-note">Los proyectos privados se presentan mediante descripciones y capturas de interfaz. Su código fuente permanece privado.</p>
+      </section>
+      <section id="sobre-mi" class="about-section"><div class="wrap about-grid"><div><p class="eyebrow">02 / DETRÁS DEL CÓDIGO</p><h2>Hola, soy Juan<span>.</span></h2><div class="monogram" aria-hidden="true">jd<span>↗</span></div></div><div class="about-copy"><p class="about-lead">Me interesa convertir problemas cotidianos en herramientas que se puedan usar.</p><p>Mis proyectos exploran la inteligencia artificial local, la gestión de negocios y las experiencias web. Desde una aplicación de escritorio hasta una interfaz para televisión, cada uno parte de un contexto distinto.</p><p>Este portafolio muestra tanto las ideas que están tomando forma como las que ya tienen una interfaz funcional. El estado y los próximos pasos de cada proyecto forman parte de su historia.</p><div class="about-tags"><span>IA y privacidad</span><span>Web y escritorio</span><span>Herramientas de negocio</span></div></div></div></section>
+      <section id="contacto" class="contact-section wrap"><p class="eyebrow">03 / CONECTEMOS</p><div class="contact-heading"><h2>Todo empieza<br />con una <em>idea.</em></h2><a href="mailto:jsduquevalencia96@gmail.com" class="contact-arrow" aria-label="Escribir un correo a Juan Duque">↗</a></div><div class="contact-links"><a href="mailto:jsduquevalencia96@gmail.com">jsduquevalencia96@gmail.com ↗</a><a href="https://github.com/JSX2011" target="_blank" rel="noopener noreferrer">GitHub / JSX2011 ↗</a></div></section>
+    </main>
+    <footer class="wrap"><a class="brand" href="#">jd<span>·</span></a><span>© {new Date().getFullYear()} Juan Duque</span><span>Hecho con Astro <span class="orange">✳︎</span></span><a href="#">Volver arriba ↑</a></footer>
+    <script>
+      const buttons = document.querySelectorAll<HTMLButtonElement>('[data-filter]');
+      buttons.forEach(button => button.addEventListener('click', () => {
+        buttons.forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
+        let count=0;
+        document.querySelectorAll<HTMLElement>('.project-card').forEach(card=>{
+          card.hidden=button.dataset.filter!=='all' && card.dataset.group!==button.dataset.filter;
+          if(!card.hidden) count++;
+        });
+        const label=document.querySelector('.filter-count');
+        if(label) label.textContent=`${count} ${count===1?'proyecto':'proyectos'}`;
+      }));
+    </script>
+  </body>
+</html>
