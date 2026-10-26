@@ -27,3 +27,7 @@ Las pruebas no certifican accesibilidad universal ni el funcionamiento del backe
 - El contacto profesional se conserva por petición del propietario.
 
 La retirada de artefactos y despliegues antiguos y la disponibilidad de objetos sin referencia en GitHub se verifican por separado. Una limpieza de Git no acredita la eliminación de cachés, copias externas o retenciones internas del proveedor.
+
+## Formulario local de demostración
+
+Pruebas sobre la compilación de producción, en español e inglés: campos obligatorios, altas/bajas de personas, simulación de confirmación, borrado y recarga. Durante estas interacciones no hubo solicitudes de red ni cambios en localStorage/sessionStorage. Verificado que no hay iframes ni atributo action, que la política bloquea envíos y que el botón de confirmación permanece deshabilitado sin JavaScript. El aviso de simulación permanece visible y no confirma una asistencia real.

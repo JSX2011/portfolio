@@ -34,3 +34,9 @@ El destino previsto es `https://jsx2011.github.io/portfolio/`. La compilación p
 ## Privacidad de las demostraciones
 
 La ficha de boda debe usar únicamente nombres, fechas, horarios, lugares, contactos y datos de pago ficticios. La captura pública se construye con una demostración independiente; no cargues el HTML, las fotos, los formularios ni los calendarios de un evento real para regenerarla. No incluyas el nombre del repositorio privado del evento ni enlaces a sus servicios. Regenera también las capturas de presentación y el ZIP cuando cambies esta ficha. El contacto profesional del portafolio se conserva por indicación expresa del propietario.
+
+## Formulario de boda: demostración sin envío
+
+`src/components/RsvpDemo.astro` permite añadir/quitar personas, validar campos y probar la confirmación en ambos idiomas. No contiene URL de destino, iframe, llamadas de red ni almacenamiento de respuestas. La confirmación es explícitamente una simulación y los datos se borran al reiniciar o recargar. Sin JavaScript, el botón de confirmación permanece deshabilitado.
+
+`SiteLayout.astro` bloquea formularios e iframes mediante Content Security Policy (`form-action 'none'`, `frame-src 'none'`). En producción también bloquea conexiones iniciadas por scripts (`connect-src 'none'`). No conviertas esta demostración en un formulario operativo ni añadas servicios de invitados reales al portafolio.

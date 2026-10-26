@@ -1,0 +1,68 @@
+---
+import type { Locale } from '../data/catalog';
+const { locale }=Astro.props as {locale:Locale};
+const t=locale==='es'?{
+ eyebrow:'DEMOSTRACIÓN INTERACTIVA',title:'Prueba la confirmación de asistencia',intro:'Usa datos ficticios. Esta demostración no está conectada con el registro de invitados: las respuestas no se envían ni se guardan.',person:'Persona',name:'Nombre de ejemplo',attendance:'Asistencia',choose:'Selecciona una opción',yes:'Asistiría',no:'No asistiría',food:'Preferencias alimentarias de ejemplo (opcional)',add:'Añadir persona',remove:'Quitar persona',submit:'Probar confirmación',reset:'Borrar datos',complete:'Simulación completada. No se ha enviado ni guardado ninguna respuesta.',limit:'Puedes probar hasta ocho personas.',noscript:'Activa JavaScript para probar esta demostración. El envío de respuestas está deshabilitado.'
+}:{
+ eyebrow:'INTERACTIVE DEMO',title:'Try the RSVP form',intro:'Use fictional details. This demonstration is not connected to the guest register: responses are neither sent nor saved.',person:'Person',name:'Example name',attendance:'Attendance',choose:'Select an option',yes:'Would attend',no:'Would not attend',food:'Example dietary preferences (optional)',add:'Add person',remove:'Remove person',submit:'Try confirmation',reset:'Clear details',complete:'Demonstration complete. No responses were sent or saved.',limit:'You can try up to eight people.',noscript:'Enable JavaScript to try this demonstration. Response submission is disabled.'
+};
+---
+<section class="wrap rsvp-demo" aria-labelledby="rsvp-demo-title">
+  <p class="eyebrow">{t.eyebrow}</p><h2 id="rsvp-demo-title">{t.title}</h2>
+  <p class="demo-notice" id="rsvp-demo-notice">{t.intro}</p>
+  <form id="rsvp-demo" data-demo-only aria-describedby="rsvp-demo-notice" autocomplete="off" data-complete={t.complete} data-limit={t.limit} data-person={t.person}>
+    <div id="demo-guests"><fieldset class="demo-guest"><legend>{t.person} 1</legend>
+      <label>{t.name}<input type="text" required maxlength="80" autocomplete="off" /></label>
+      <label>{t.attendance}<select required><option value="">{t.choose}</option><option value="yes">{t.yes}</option><option value="no">{t.no}</option></select></label>
+      <label class="demo-diet">{t.food}<input type="text" maxlength="120" autocomplete="off" /></label>
+      <button type="button" class="demo-remove" data-remove disabled>{t.remove}</button>
+    </fieldset></div>
+    <div class="demo-actions"><button type="button" id="demo-add" disabled>{t.add}</button><button type="submit" id="demo-confirm" disabled>{t.submit}</button><button type="reset">{t.reset}</button></div>
+    <p id="demo-result" class="demo-result" role="status" aria-live="polite"></p>
+    <noscript><p>{t.noscript}</p></noscript>
+  </form>
+</section>
+<script>
+  const form=document.querySelector<HTMLFormElement>('#rsvp-demo');
+  if(form){
+    const guests=form.querySelector<HTMLElement>('#demo-guests')!;
+    const add=form.querySelector<HTMLButtonElement>('#demo-add')!;
+    const confirm=form.querySelector<HTMLButtonElement>('#demo-confirm')!;
+    const result=form.querySelector<HTMLElement>('#demo-result')!;
+    const original=guests.querySelector<HTMLFieldSetElement>('.demo-guest')!;
+    const update=()=>{
+      const rows=guests.querySelectorAll<HTMLFieldSetElement>('.demo-guest');
+      rows.forEach((row,index)=>{
+        row.querySelector('legend')!.textContent=`${form.dataset.person} ${index+1}`;
+        row.querySelector<HTMLButtonElement>('[data-remove]')!.disabled=rows.length===1;
+      });
+      add.disabled=rows.length>=8;
+      result.textContent='';
+    };
+    // There is deliberately no endpoint, iframe, network API or response storage.
+    form.addEventListener('submit',event=>{
+      event.preventDefault();
+      if(!form.reportValidity())return;
+      result.textContent=form.dataset.complete||'';
+    });
+    add.addEventListener('click',()=>{
+      if(guests.children.length>=8){result.textContent=form.dataset.limit||'';return;}
+      const row=original.cloneNode(true) as HTMLFieldSetElement;
+      row.querySelectorAll<HTMLInputElement|HTMLSelectElement>('input,select').forEach(input=>{input.value='';});
+      guests.append(row);update();row.querySelector<HTMLInputElement>('input')!.focus();
+    });
+    guests.addEventListener('click',event=>{
+      const target=event.target;
+      if(!(target instanceof Element))return;
+      const remove=target.closest<HTMLButtonElement>('[data-remove]');
+      if(!remove||guests.children.length===1)return;
+      remove.closest('.demo-guest')?.remove();update();add.focus();
+    });
+    form.addEventListener('input',()=>{result.textContent='';});
+    form.addEventListener('reset',()=>{
+      guests.querySelectorAll('.demo-guest').forEach((row,index)=>{if(index>0)row.remove();});
+      update();
+    });
+    update();confirm.disabled=false;
+  }
+</script>

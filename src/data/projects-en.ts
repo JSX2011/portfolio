@@ -36,7 +36,7 @@ export const english: Record<string, { name?: string; category: string; status: 
   name:'Wedding invitation', category:'Web experience · Event',status:'Under review',version:'First version',
   title:'An invitation that tells a story.',
   description:'A responsive Spanish wedding invitation with a burgundy and ivory visual direction. It combines the couple’s story, a gallery and tools for organizing attendance.',
-  features:['Cover, story and a gallery with image enlargement.','Countdown, maps and calendar links.','Family RSVP with an individual record for each guest.','A form connected to Google Forms and a private Sheets dashboard.'],
+  features:['Cover, story and a gallery with image enlargement.','Countdown, maps and calendar links.','Family RSVP with an individual record for each guest.','A local demonstration form that does not send or store responses.'],
   progress:'The first version is available for the couple’s review. Visual content and a custom domain remain subject to review. The portfolio does not include guest records or the private dashboard.',
   capture:'Anonymous demonstration with fictional names and details and a generic illustration without people. It does not depict a real event or submit forms.',
  },

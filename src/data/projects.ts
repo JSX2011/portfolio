@@ -48,7 +48,7 @@ export const projects = [
     status: 'En revisión', version: 'Primera versión', year: '2026', image: 'invitation-demo-3a01c953b117.png', color: '#e6d4d4',
     title: 'Una invitación que cuenta una historia.',
     description: 'Invitación de boda adaptable en español, con una dirección visual en burdeos y marfil. Combina la historia de la pareja, una galería y herramientas para organizar la asistencia.',
-    features: ['Portada, historia y galería con ampliación.', 'Cuenta regresiva, mapas y acceso a calendarios.', 'Confirmación familiar con registro individual por asistente.', 'Formulario conectado con Google Forms y un panel privado en Sheets.'],
+    features: ['Portada, historia y galería con ampliación.', 'Cuenta regresiva, mapas y acceso a calendarios.', 'Confirmación familiar con registro individual por asistente.', 'Formulario de demostración local, sin envío ni almacenamiento de respuestas.'],
     progress: 'Primera versión disponible para revisión de la pareja. El contenido visual y el dominio propio siguen sujetos a revisión. La vista del portafolio no incluye registros de invitados ni el panel privado.',
     stack: ['HTML', 'CSS', 'JavaScript', 'Cloudflare Workers'],
     capture: 'Demostración anónima con nombres y datos ficticios e ilustración genérica sin personas. No corresponde a un evento real ni envía formularios.',
