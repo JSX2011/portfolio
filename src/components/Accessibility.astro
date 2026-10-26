@@ -1,0 +1,56 @@
+---
+const {locale='es'}=Astro.props;
+const a=locale==='en'?{
+ title:'Accessibility',close:'Close accessibility settings',intro:'Adjust the page for comfortable reading and navigation.',size:'Text size',normal:'Normal',large:'Large',larger:'Very large',max:'Maximum',contrast:'High contrast',spacing:'More reading space',links:'Underline links',motion:'Reduce motion',note:'Your device’s motion preference is respected. Settings are saved only in this browser.',reset:'Reset settings',updated:'Settings updated.',restored:'Settings reset.'
+}:{
+ title:'Accesibilidad',close:'Cerrar ajustes de accesibilidad',intro:'Ajusta la página para leer y navegar con comodidad.',size:'Tamaño del texto',normal:'Normal',large:'Grande',larger:'Muy grande',max:'Máximo',contrast:'Alto contraste',spacing:'Más espacio para leer',links:'Subrayar los enlaces',motion:'Reducir movimiento',note:'Se respeta la preferencia de movimiento de tu dispositivo. Tus ajustes se guardan solo en este navegador.',reset:'Restablecer ajustes',updated:'Ajustes actualizados.',restored:'Ajustes restablecidos.'
+};
+---
+<button class="accessibility-launcher" id="accessibility-open" type="button" aria-haspopup="dialog" aria-controls="accessibility-panel" aria-expanded="false">
+  <svg viewBox="0 0 24 24" aria-hidden="true" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="4" r="2"/><path d="M4 8h16M12 8v6m0 0-5 7m5-7 5 7"/></svg>
+  <span>{a.title}</span>
+</button>
+<dialog id="accessibility-panel" class="accessibility-panel" aria-labelledby="accessibility-title" data-updated={a.updated} data-restored={a.restored}>
+  <div class="accessibility-heading"><h2 id="accessibility-title">{a.title}</h2><button id="accessibility-close" type="button" aria-label={a.close}>✕</button></div>
+  <p class="accessibility-intro">{a.intro}</p>
+  <label class="accessibility-size" for="accessibility-size">{a.size}<select id="accessibility-size"><option value="1">{a.normal} · 100 %</option><option value="1.15">{a.large} · 115 %</option><option value="1.3">{a.larger} · 130 %</option><option value="1.5">{a.max} · 150 %</option></select></label>
+  <label class="accessibility-option"><input id="accessibility-contrast" type="checkbox" /> {a.contrast}</label>
+  <label class="accessibility-option"><input id="accessibility-spacing" type="checkbox" /> {a.spacing}</label>
+  <label class="accessibility-option"><input id="accessibility-links" type="checkbox" /> {a.links}</label>
+  <label class="accessibility-option"><input id="accessibility-motion" type="checkbox" /> {a.motion}</label>
+  <p class="accessibility-note">{a.note}</p>
+  <button class="accessibility-reset" id="accessibility-reset" type="button">{a.reset}</button>
+  <p class="accessibility-status" id="accessibility-status" role="status" aria-live="polite"></p>
+</dialog>
+<script>
+  const panel = document.querySelector<HTMLDialogElement>('#accessibility-panel')!;
+  const launcher = document.querySelector<HTMLButtonElement>('#accessibility-open')!;
+  const size = document.querySelector<HTMLSelectElement>('#accessibility-size')!;
+  const options = ['contrast', 'spacing', 'links', 'motion'] as const;
+  const inputs = Object.fromEntries(options.map(key => [key, document.querySelector<HTMLInputElement>(`#accessibility-${key}`)!])) as Record<typeof options[number], HTMLInputElement>;
+  const storageKey = 'sd-tech-accessibility-v1';
+  function apply(announce = false) {
+    document.documentElement.style.setProperty('--text-scale', size.value);
+    options.forEach(key => document.documentElement.toggleAttribute(`data-${key}`, inputs[key].checked));
+    try { localStorage.setItem(storageKey, JSON.stringify({ size: size.value, ...Object.fromEntries(options.map(key => [key, inputs[key].checked])) })); } catch {}
+    if (announce) document.querySelector('#accessibility-status')!.textContent = panel.dataset.updated || '';
+  }
+  try {
+    const saved = JSON.parse(localStorage.getItem(storageKey) || '{}');
+    if (saved && typeof saved === 'object') {
+      if (['1', '1.15', '1.3', '1.5'].includes(saved.size)) size.value = saved.size;
+      options.forEach(key => inputs[key].checked = saved[key] === true);
+    }
+  } catch {}
+  apply();
+  launcher.addEventListener('click', () => { panel.showModal(); launcher.setAttribute('aria-expanded', 'true'); });
+  document.querySelector('#accessibility-close')!.addEventListener('click', () => panel.close());
+  panel.addEventListener('close', () => { launcher.setAttribute('aria-expanded', 'false'); launcher.focus(); });
+  panel.addEventListener('click', e => { if (e.target === panel) { const r = panel.getBoundingClientRect(); if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) panel.close(); } });
+  size.addEventListener('change', () => apply(true));
+  options.forEach(key => inputs[key].addEventListener('change', () => apply(true)));
+  document.querySelector('#accessibility-reset')!.addEventListener('click', () => {
+    size.value = '1'; options.forEach(key => inputs[key].checked = false); apply();
+    document.querySelector('#accessibility-status')!.textContent = panel.dataset.restored || '';
+  });
+</script>

@@ -21,7 +21,7 @@ Tipografías DejaVu Sans regular y bold y DejaVu Sans Mono del kit oficial, conv
 
 ## Visibilidad
 
-El propietario autorizó conservar público el repositorio del portafolio el 26 de octubre de 2026. Esa autorización incluye sus descripciones y capturas; no cambia la visibilidad de los repositorios originales. GitHub Pages permanece sin activar hasta la revisión de la web.
+El propietario autorizó conservar público el repositorio del portafolio el 26 de octubre de 2026. Esa autorización incluye sus descripciones y capturas; no cambia la visibilidad de los repositorios originales. El propietario autorizó posteriormente la publicación de la web en GitHub Pages.
 
 ## Adaptación a SD Tech Systems
 

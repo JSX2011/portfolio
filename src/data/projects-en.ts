@@ -1,0 +1,51 @@
+// English product content; original Spanish content lives in projects.ts.
+export const english: Record<string, { category: string; status: string; version: string; title: string; description: string; features: string[]; progress: string; capture: string }> = {
+ 'akashic-vault': {
+  category:'Local AI · Desktop', status:'In development', version:'0.6.0-dev',
+  title:'A space to think. A vault to keep it.',
+  description:'A Windows desktop application combining local AI assistants with an encrypted vault. Once models are installed, chat can run without an account or cloud services.',
+  features:['Chat with local models and different assistance modes.','Encrypted history with access tied to the original USB drive.','Image generation and, in the Max edition, silent video generation.','Engine installation from USB or through a consented download.'],
+  progress:'Development version with Lite, Pro and Max editions. Production signing, complete installers and final acceptance of the local updater remain pending.',
+  capture:'Original interface with demonstration API responses; no AI model was run for this screenshot.',
+ },
+ openmultipos:{
+  category:'Business management · ERP',status:'In development',version:'Local integration',
+  title:'Two businesses. One workspace.',
+  description:'A self-hosted administration workspace built on ERPNext, Frappe and X POS. It brings together sales, inventory, purchases and finances for two businesses while keeping their documents, stock and accounts separate.',
+  features:['Business selection, profiles and permissions.','Sales, inventory, purchases, customers and team management.','A combined basket with a separate invoice per business and an internal receipt.','Native online checkout, backups and local recovery.'],
+  progress:'Project documentation records local integration and checkout/printing checks. The demo is a separate simulator. DIAN electronic invoicing and offline operation remain disabled; portable and installable releases are still in development.',
+  capture:'Project manual screenshot generated from fictional data and checked against its manifest.',
+ },
+ 'easy-drink':{
+  category:'Point of sale · PWA',status:'Evolving',version:'Web + Android',
+  title:'Business keeps moving, even offline.',
+  description:'An offline point-of-sale adaptation based on FreeKasir. A shared codebase supports a PWA and an Android application, with local storage and Spanish/English interfaces.',
+  features:['Checkout, discounts, payments and open bills.','Products, barcodes and inventory.','Customers, suppliers, expenses, debts and reports.','PIN-based users, backups and thermal printing.'],
+  progress:'Modules are present in the source, with local IndexedDB storage. The screenshot uses a demonstration session. Source availability does not certify every device or printer.',
+  capture:'Original browser interface with fictional local settings and data.',
+ },
+ 'akashic-tv':{
+  category:'Entertainment · Smart TV',status:'Alpha',version:'0.2.5',
+  title:'Your next story, a button away.',
+  description:'A private application for Samsung Tizen TVs, designed for browsing movies and series using a remote control. It includes a Spanish-language catalog, title details and playback provider selection.',
+  features:['Search by title or person, with genre and year filters.','Title details, credits, seasons and episodes.','Remote-control navigation and provider switching.','Subtitle preferences and an audio panel.'],
+  progress:'An alpha installed on two TVs according to project documentation. Playback is verified only for specific cases. Favorites, resume and external subtitles remain pending; 4K/HDR is not guaranteed.',
+  capture:'Original interface using a fictional local catalog, without contacting playback providers or playing media.',
+ },
+ invitacion:{
+  category:'Web experience · Event',status:'Under review',version:'First version',
+  title:'An invitation that tells a story.',
+  description:'A responsive Spanish wedding invitation with a burgundy and ivory visual direction. It combines the couple’s story, a gallery and tools for organizing attendance.',
+  features:['Cover, story and a gallery with image enlargement.','Countdown, maps and calendar links.','Family RSVP with an individual record for each guest.','A form connected to Google Forms and a private Sheets dashboard.'],
+  progress:'The first version is available for the couple’s review. Visual content and a custom domain remain subject to review. The portfolio does not include guest records or the private dashboard.',
+  capture:'Local screenshot of the invitation interface. The RSVP form was not submitted.',
+ },
+ tasktone:{
+  category:'Audio · Marketplace',status:'Prototype',version:'0.1.0',
+  title:'A meeting point for audio creators.',
+  description:'A marketplace prototype intended to connect creators with audio professionals. It proposes a workflow from file upload to review and delivery.',
+  features:['Responsive web interface.','Authentication and separate creator/professional roles.','Prisma data schema and an API foundation.','A proposed workflow for audio-processing commissions.'],
+  progress:'The roadmap marks authentication, the API foundation and the interface as completed. Audio uploads, messaging, payments and tracking dashboards remain pending. Promises on the prototype homepage describe the product proposal.',
+  capture:'Original prototype homepage running locally; no payments or uploads were made.',
+ },
+};

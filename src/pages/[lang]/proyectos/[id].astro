@@ -1,0 +1,7 @@
+---
+import ProjectPage from '../../../components/ProjectPage.astro';
+import { locales, getProjects } from '../../../i18n';
+export function getStaticPaths(){return locales.flatMap(locale=>getProjects(locale).map(p=>({params:{lang:locale,id:p.id},props:{locale,id:p.id}})));}
+const {locale,id}=Astro.props;
+---
+<ProjectPage locale={locale} id={id}/>

@@ -1,31 +1,7 @@
 ---
+import ProjectPage from '../../components/ProjectPage.astro';
 import { projects } from '../../data/projects';
-import Brand from '../../components/Brand.astro';
-import '../../styles.css';
-export function getStaticPaths() { return projects.map((project, i) => ({ params: {id:project.id}, props:{ project, next:projects[(i+1)%projects.length] } })); }
-const { project:p, next } = Astro.props;
-const base = import.meta.env.BASE_URL;
+export function getStaticPaths(){return projects.map(p=>({params:{id:p.id},props:{id:p.id}}));}
+const {id}=Astro.props;
 ---
-<!doctype html>
-<html lang="es">
-<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="robots" content="noindex, nofollow"/><meta name="description" content={p.description}/><meta name="theme-color" content="#07111F"/><link rel="icon" href={`${base}favicon.ico`} sizes="any"/><link rel="icon" href={`${base}favicon-32.png`} type="image/png" sizes="32x32"/><title>{p.name} — SD Tech Systems</title></head>
-<body>
-  <a class="skip" href="#contenido">Saltar al contenido</a>
-  <div class="review"><span class="review-dot"></span> VISTA PREVIA · PORTAFOLIO EN REVISIÓN<span class="review-right">Sin publicar</span></div>
-  <nav class="wrap detail-nav" aria-label="Navegación del proyecto"><a href={`${base}#proyectos`}>← Todos los proyectos</a><Brand /><span>{p.year} / {p.private?'Privado':'Público'}</span></nav>
-  <main id="contenido">
-    <section class="wrap detail-hero"><p class="eyebrow">{p.category.toUpperCase()}</p><h1>{p.name}<span class="accent">.</span></h1><div class="detail-intro"><p>{p.description}</p><span class="status"><i></i>{p.status} · {p.version}</span></div></section>
-    <figure class="detail-image" style={`--project-color:${p.color};margin:0`}><button id="enlarge" aria-label={`Ampliar captura de ${p.name}`}><img src={`${base}screenshots/${p.image}`} alt={`Interfaz de ${p.name}`} width="1440" height="900"/></button><figcaption class="caption">↗ Pulsa la imagen para ampliarla. {p.capture}</figcaption></figure>
-    <section class="wrap detail-body"><div><p class="eyebrow">QUÉ PERMITE HACER</p><h2>Funcionalidades</h2><ul class="feature-list">{p.features.map(f=><li>{f}</li>)}</ul><div class="stack-list" aria-label="Tecnologías">{p.stack.map(s=><span>{s}</span>)}</div>{!p.private&&<a class="source-link" href={`https://github.com/JSX2011/${p.source}`} target="_blank" rel="noopener noreferrer">Explorar repositorio público ↗</a>}</div><aside class="development"><p class="eyebrow">ESTADO DEL PROYECTO</p><h2>{p.status}</h2><p>{p.progress}</p><p style="margin-top:20px;font-size:11px">Revisión documental: 26 de octubre de 2026. {p.private?'El código fuente de este proyecto es privado.':''}</p></aside></section>
-    <nav class="wrap detail-next" aria-label="Más proyectos"><a href={`${base}#proyectos`}>← Volver a la selección</a><div><p>SIGUIENTE PROYECTO</p><a class="source-link" style="margin:0" href={`${base}proyectos/${next.id}/`}>{next.name} ↗</a></div></nav>
-  </main>
-  <dialog id="capture-dialog" aria-label={`Captura ampliada de ${p.name}`}><button id="close-dialog" type="button">Cerrar ✕</button><img src={`${base}screenshots/${p.image}`} alt={`Captura ampliada de ${p.name}`}/><p>{p.capture}</p></dialog>
-  <footer class="wrap"><Brand /><div class="footer-signature"><span>Desarrollado por SD Tech Systems · Parte de SD Tech</span><span>© {new Date().getFullYear()} Juan Sebastián Duque Valencia</span></div><span>Hecho con Astro</span><a href={base}>Inicio ↗</a></footer>
-  <script>
-    const dialog=document.querySelector<HTMLDialogElement>('#capture-dialog');
-    document.querySelector('#enlarge')?.addEventListener('click',()=>dialog?.showModal());
-    document.querySelector('#close-dialog')?.addEventListener('click',()=>dialog?.close());
-    dialog?.addEventListener('click',e=>{if(e.target===dialog)dialog.close()});
-  </script>
-</body>
-</html>
+<ProjectPage locale="es" id={id}/>

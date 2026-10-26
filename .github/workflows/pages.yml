@@ -1,6 +1,7 @@
-# INACTIVO: copiar a .github/workflows/pages.yml únicamente al aprobar la publicación.
 name: Publicar portafolio en GitHub Pages
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
 permissions:
   contents: read
@@ -24,6 +25,8 @@ jobs:
           PAGES_BASE: /portfolio/
           ASTRO_TELEMETRY_DISABLED: '1'
       - uses: actions/configure-pages@v5
+        with:
+          enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

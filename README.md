@@ -1,12 +1,12 @@
 # SD Tech Systems · Portafolio
 
-Portafolio de Juan Duque bajo la identidad SD Tech Systems, en español y construido con **Astro 5**, salida estática y JavaScript mínimo. Incluye seis proyectos públicos y privados, capturas reales de sus interfaces, funciones, tecnologías y estado de desarrollo.
+Portafolio bilingüe (español e inglés) de Juan Duque bajo la identidad SD Tech Systems, construido con **Astro 5**, salida estática y JavaScript mínimo. Incluye seis proyectos públicos y privados, capturas reales de sus interfaces, funciones, tecnologías y estado de desarrollo.
 
-**Estado: sitio en revisión. El repositorio es público por decisión del propietario; GitHub Pages no está activado y no hay ningún workflow de publicación activo.**
+**Publicación autorizada por el propietario. Destino: https://jsx2011.github.io/portfolio/. El estado efectivo del despliegue se comprueba en GitHub Pages/Actions.**
 
 ![Vista de escritorio](docs/preview-desktop.png)
 
-Puedes revisar también la [captura móvil](docs/preview-mobile.png) o descargar [la vista previa completa](docs/vista-previa.zip): descomprime el ZIP y abre `index.html`. Incluye las siete páginas, filtros y ampliación de capturas, sin instalar Astro ni usar un servidor.
+Puedes revisar también la [captura móvil](docs/preview-mobile.png) o descargar [la vista previa completa](docs/vista-previa.zip): descomprime el ZIP y abre `index.html`. Incluye las páginas bilingües, filtros y ampliación de capturas, sin instalar Astro ni usar un servidor.
 
 ## Revisar localmente
 
@@ -42,22 +42,22 @@ En PowerShell: `$env:PAGES_BASE='/portfolio/'; npm run build`.
 - `docs/FUENTES.md`: procedencia, revisión y límites de la evidencia.
 - `docs/preview-desktop.png` y `docs/preview-mobile.png`: vistas de esta versión.
 
-## GitHub Pages, después de la revisión
+## Idiomas, categorías y publicación
 
-El archivo `docs/github-pages.yml.example` prepara el despliegue, pero está inactivo. Solo después de aprobar la publicación:
+- Español: `/es/`; inglés: `/en/`. El selector mantiene el proyecto abierto.
+- Las categorías y asignaciones se editan en `src/data/catalog.ts`, sin tocar las plantillas.
+- Las fichas incluyen público objetivo, uso, construcción, arquitectura, plataforma, funciones, estado y consideraciones para contratar.
+- Guía de edición: [docs/CONFIGURACION.md](docs/CONFIGURACION.md).
+- El panel de accesibilidad permite texto de hasta 150 %, contraste, espaciado, subrayado de enlaces y reducción de movimiento. Respeta la preferencia del sistema y guarda ajustes solo en el navegador.
+- Las capturas se enderezan y se elevan como una hoja al pasar el puntero o enfocar con teclado. El movimiento se desactiva cuando se solicita reducirlo.
 
-1. Revisar las capturas y el contacto. La visibilidad pública del repositorio ya fue autorizada.
-2. Retirar el aviso de revisión y decidir si conservar `noindex` en ambas plantillas.
-3. Activar Pages con origen GitHub Actions.
-4. Copiar el ejemplo a `.github/workflows/pages.yml` y ejecutarlo manualmente.
-
-El ejemplo usa `/portfolio/` y `https://jsx2011.github.io`. Para un repositorio de usuario llamado `JSX2011.github.io`, usar `/` como base. Pages en repositorios privados depende del plan de GitHub; la privacidad del repositorio por sí sola no asegura que el sitio publicado sea privado.
+GitHub Pages utiliza una compilación estática con `PAGES_BASE=/portfolio/`. No se publican fuentes privadas ni claves de los productos originales.
 
 ## Validación
 
-Compilación estática de siete páginas. Verificados filtros, imágenes, navegación, apertura/cierre de seis diálogos, Escape y devolución del foco. Revisado el desbordamiento horizontal a 360, 390, 768 y 1440 px. Los detalles de los proyectos se fundamentan en sus fuentes; no constituyen una nueva validación de sus motores, integraciones o hardware.
+Compilación estática de portadas y fichas bilingües, más rutas españolas de compatibilidad, sitemap y 404. Las comprobaciones de la versión actual se registran en `docs/VERIFICACION.md`. Los detalles de los proyectos se fundamentan en sus fuentes; no constituyen una nueva validación de sus motores, integraciones o hardware.
 
-No se ha publicado el sitio, habilitado Pages ni modificado la visibilidad de los proyectos originales.
+La publicación de la web fue autorizada por el propietario. No se modifica la visibilidad de los proyectos originales.
 
 ## Identidad visual
 

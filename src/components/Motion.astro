@@ -1,0 +1,10 @@
+<script>
+  // Keep content visible if JavaScript or animation APIs are unavailable.
+  const targets = document.querySelectorAll<HTMLElement>('.section-heading, .project-card, .about-grid, .contact-heading');
+  if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches && !document.documentElement.hasAttribute('data-motion')) {
+    const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.classList.add('reveal-in'); observer.unobserve(entry.target); }
+    }), { threshold: 0.08 });
+    targets.forEach(target => { target.classList.add('reveal'); observer.observe(target); });
+  }
+</script>

@@ -20,4 +20,4 @@ Se emplean DejaVu Sans Bold en títulos, DejaVu Sans en lectura y DejaVu Sans Mo
 
 Lema: «Software claro. Confianza real.» Oferta: software libre, comercial y a medida. Firma del sitio: «Desarrollado por SD Tech Systems · Parte de SD Tech». Autor: Juan Sebastián Duque Valencia. No se añaden contactos, dominios, certificaciones o garantías nuevas.
 
-Esta aplicación visual no cambia titularidad, licencias ni relaciones comerciales de los productos. El sitio continúa en revisión y sin despliegue en GitHub Pages.
+Esta aplicación visual no cambia titularidad, licencias ni relaciones comerciales de los productos. La publicación de la web en GitHub Pages fue autorizada posteriormente por el propietario.

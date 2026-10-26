@@ -1,0 +1,40 @@
+---
+import SiteLayout from './SiteLayout.astro';
+import LanguageSwitch from './LanguageSwitch.astro';
+import Brand from './Brand.astro';
+import { categories, assignments, siteConfig, type Locale } from '../data/catalog';
+import { getProjects, words } from '../i18n';
+const { locale='es' }=Astro.props as {locale:Locale};
+const t=words[locale], projects=getProjects(locale), base=import.meta.env.BASE_URL;
+---
+<SiteLayout locale={locale} title={`${siteConfig.name} — ${t.tagline} ${t.tagline2}`} description={t.intro}>
+  <header class="site-header wrap"><Brand href={`${base}${locale}/`}/><nav class="main-navigation" aria-label={locale==='es'?'Navegación principal':'Main navigation'}><a href="#proyectos">{t.projects} <span>{projects.length.toString().padStart(2,'0')}</span></a><a href="#sobre-mi">{t.about}</a><a class="nav-contact" href="#contacto">{t.contact} ↗</a></nav><LanguageSwitch locale={locale}/></header>
+  <main id="contenido">
+    <section class="hero wrap" aria-labelledby="titulo"><div class="hero-top"><p class="eyebrow"><span class="terminal-cursor" aria-hidden="true">&gt;_</span>{t.heroLabel}</p><p class="hero-index">{t.portfolio}<br/>2025 — 2026</p></div><h1 id="titulo">{t.tagline}<br/><em>{t.tagline2}</em></h1><div class="hero-bottom"><p>{t.intro}</p><a class="round-link" href="#proyectos"><span>{t.explore}</span><span class="circle" aria-hidden="true">↓</span></a></div><div class="hero-line"><span>{t.ai}</span><span aria-hidden="true">/</span><span>{t.management}</span><span aria-hidden="true">/</span><span>{t.web}</span><span class="line-end">{t.design}</span></div></section>
+    <section id="proyectos" class="projects-section wrap" aria-labelledby="proyectos-titulo">
+      <div class="section-heading"><div><p class="eyebrow">{t.selected}</p><h2 id="proyectos-titulo">{t.concept}<br/>{t.interface}<span>.</span></h2></div><p>{t.selection}</p></div>
+      <div class="filter-bar"><div class="filters" role="group" aria-label={t.filter}><button data-filter="all" aria-pressed="true">{t.all} <span>{projects.length}</span></button>{categories.filter(c=>c.visible).map(c=><button data-filter={c.id} aria-pressed="false">{c.label[locale]} <span>{projects.filter(p=>assignments[p.id]?.includes(c.id)).length}</span></button>)}</div><span class="filter-count" role="status" aria-live="polite" data-plural={t.count} data-singular={t.one}>{projects.length} {t.count}</span></div>
+      <p id="catalog-empty" class="catalog-empty" hidden>{t.empty} <a href={`mailto:${siteConfig.email}`}>{t.contact} ↗</a></p>
+      <div class="project-grid">{projects.map((p,i)=><article class="project-card" data-categories={(assignments[p.id]||[]).join(' ')}>
+        <a class="project-visual" href={`${base}${locale}/proyectos/${p.id}/`} aria-label={`${t.view} ${p.name}`}><div class="visual-top"><span>{String(i+1).padStart(2,'0')} / {p.category}</span><span>{p.private?`↳ ${t.private}`:`↗ ${t.public}`}</span></div><div class="screenshot-frame"><div class="browser-dots" aria-hidden="true"><i></i><i></i><i></i><span>{p.name}</span></div><img src={`${base}screenshots/${p.image}`} alt={`${locale==='es'?'Interfaz de':'Interface of'} ${p.name}`} width="1440" height="900" loading={i<2?'eager':'lazy'}/></div><span class="visual-arrow" aria-hidden="true">↗</span></a>
+        <div class="card-heading"><h3><a href={`${base}${locale}/proyectos/${p.id}/`}>{p.name}</a></h3><span class:list={['status',['Alfa','Prototipo','Alpha','Prototype'].includes(p.status)?'status-amber':'']}><i></i>{p.status}</span></div><p class="card-title">{p.title}</p><div class="card-meta"><span>{p.stack.slice(0,3).join(' / ')}</span><span>{p.year}</span></div>
+      </article>)}</div><p class="catalog-note">{t.privateNote}</p>
+    </section>
+    <section id="sobre-mi" class="about-section"><div class="wrap about-grid"><div><p class="eyebrow">02 / SD TECH SYSTEMS</p><h2>{t.behind}<span>.</span></h2><Brand decorative/><p class="brand-family">{t.part}</p></div><div class="about-copy"><p class="about-lead">{t.bio}</p><p>{t.brand}</p><p>{t.story}</p><div class="about-tags">{t.values.map(v=><span>{v}</span>)}</div></div></div></section>
+    <section id="contacto" class="contact-section wrap"><p class="eyebrow">{t.connect}</p><div class="contact-heading"><h2>{t.idea}<br/><em>{t.idea2}</em></h2><a href={`mailto:${siteConfig.email}`} class="contact-arrow" aria-label={t.email}>↗</a></div><div class="contact-links"><a href={`mailto:${siteConfig.email}`}>{siteConfig.email} ↗</a><a href={siteConfig.github} target="_blank" rel="noopener noreferrer">GitHub / JSX2011 ↗</a></div></section>
+  </main>
+<script>
+ const buttons=document.querySelectorAll<HTMLButtonElement>('[data-filter]');
+ buttons.forEach(button=>button.addEventListener('click',()=>{
+   buttons.forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
+   let count=0;
+   document.querySelectorAll<HTMLElement>('.project-card').forEach(card=>{
+     card.hidden=button.dataset.filter!=='all'&&!card.dataset.categories?.split(' ').includes(button.dataset.filter!);
+     if(!card.hidden)count++;
+   });
+   const label=document.querySelector<HTMLElement>('.filter-count');
+   if(label)label.textContent=`${count} ${count===1?label.dataset.singular:label.dataset.plural}`;
+   document.querySelector<HTMLElement>('#catalog-empty')!.hidden=count!==0;
+ }));
+</script>
+</SiteLayout>
