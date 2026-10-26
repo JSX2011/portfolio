@@ -1,0 +1,8 @@
+---
+const { href = import.meta.env.BASE_URL, decorative = false } = Astro.props;
+---
+{decorative ? (
+  <div class="brand-display" aria-hidden="true"><span class="brand-initials">SD<span class="brand-period">.</span></span><span class="brand-name">TECH<br />SYSTEMS</span></div>
+) : (
+  <a class="brand-lockup" href={href} aria-label="SD Tech Systems, inicio"><span class="brand-initials" aria-hidden="true">SD<span class="brand-period">.</span></span><span class="brand-name" aria-hidden="true">TECH<br />SYSTEMS</span></a>
+)}

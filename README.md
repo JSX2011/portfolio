@@ -1,6 +1,6 @@
-# Juan Duque · Portafolio
+# SD Tech Systems · Portafolio
 
-Portafolio en español construido con **Astro 5**, salida estática y JavaScript mínimo. Incluye seis proyectos públicos y privados, capturas reales de sus interfaces, funciones, tecnologías y estado de desarrollo.
+Portafolio de Juan Duque bajo la identidad SD Tech Systems, en español y construido con **Astro 5**, salida estática y JavaScript mínimo. Incluye seis proyectos públicos y privados, capturas reales de sus interfaces, funciones, tecnologías y estado de desarrollo.
 
 **Estado: sitio en revisión. El repositorio es público por decisión del propietario; GitHub Pages no está activado y no hay ningún workflow de publicación activo.**
 
@@ -58,3 +58,7 @@ El ejemplo usa `/portfolio/` y `https://jsx2011.github.io`. Para un repositorio 
 Compilación estática de siete páginas. Verificados filtros, imágenes, navegación, apertura/cierre de seis diálogos, Escape y devolución del foco. Revisado el desbordamiento horizontal a 360, 390, 768 y 1440 px. Los detalles de los proyectos se fundamentan en sus fuentes; no constituyen una nueva validación de sus motores, integraciones o hardware.
 
 No se ha publicado el sitio, habilitado Pages ni modificado la visibilidad de los proyectos originales.
+
+## Identidad visual
+
+SD Tech Systems aparece en portada, navegación, fichas, pie, metadatos y favicon. El componente `src/components/Brand.astro` centraliza el tratamiento tipográfico. No se encontraron activos oficiales de marca en las fuentes conectadas: el tratamiento de texto y favicon son provisionales, y se conserva la paleta marfil, grafito y naranja del primer borrador hasta disponer del logo o guía oficial.

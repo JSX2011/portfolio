@@ -1,5 +1,6 @@
 ---
 import { projects } from '../../data/projects';
+import Brand from '../../components/Brand.astro';
 import '../../styles.css';
 export function getStaticPaths() { return projects.map((project, i) => ({ params: {id:project.id}, props:{ project, next:projects[(i+1)%projects.length] } })); }
 const { project:p, next } = Astro.props;
@@ -7,11 +8,11 @@ const base = import.meta.env.BASE_URL;
 ---
 <!doctype html>
 <html lang="es">
-<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="robots" content="noindex, nofollow"/><meta name="description" content={p.description}/><link rel="icon" href={`${base}favicon.svg`} type="image/svg+xml"/><title>{p.name} — Juan Duque</title></head>
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="robots" content="noindex, nofollow"/><meta name="description" content={p.description}/><link rel="icon" href={`${base}favicon.svg`} type="image/svg+xml"/><title>{p.name} — SD Tech Systems</title></head>
 <body>
   <a class="skip" href="#contenido">Saltar al contenido</a>
   <div class="review"><span class="review-dot"></span> VISTA PREVIA · PORTAFOLIO EN REVISIÓN<span class="review-right">Sin publicar</span></div>
-  <nav class="wrap detail-nav" aria-label="Navegación del proyecto"><a href={`${base}#proyectos`}>← Todos los proyectos</a><a href={base} class="brand" aria-label="Juan Duque, inicio">jd<span>·</span></a><span>{p.year} / {p.private?'Privado':'Público'}</span></nav>
+  <nav class="wrap detail-nav" aria-label="Navegación del proyecto"><a href={`${base}#proyectos`}>← Todos los proyectos</a><Brand /><span>{p.year} / {p.private?'Privado':'Público'}</span></nav>
   <main id="contenido">
     <section class="wrap detail-hero"><p class="eyebrow">{p.category.toUpperCase()}</p><h1>{p.name}<span class="orange">.</span></h1><div class="detail-intro"><p>{p.description}</p><span class="status"><i></i>{p.status} · {p.version}</span></div></section>
     <figure class="detail-image" style={`--project-color:${p.color};margin:0`}><button id="enlarge" aria-label={`Ampliar captura de ${p.name}`}><img src={`${base}screenshots/${p.image}`} alt={`Interfaz de ${p.name}`} width="1440" height="900"/></button><figcaption class="caption">↗ Pulsa la imagen para ampliarla. {p.capture}</figcaption></figure>
@@ -19,7 +20,7 @@ const base = import.meta.env.BASE_URL;
     <nav class="wrap detail-next" aria-label="Más proyectos"><a href={`${base}#proyectos`}>← Volver a la selección</a><div><p>SIGUIENTE PROYECTO</p><a class="source-link" style="margin:0" href={`${base}proyectos/${next.id}/`}>{next.name} ↗</a></div></nav>
   </main>
   <dialog id="capture-dialog" aria-label={`Captura ampliada de ${p.name}`}><button id="close-dialog" type="button">Cerrar ✕</button><img src={`${base}screenshots/${p.image}`} alt={`Captura ampliada de ${p.name}`}/><p>{p.capture}</p></dialog>
-  <footer class="wrap"><span>© {new Date().getFullYear()} Juan Duque</span><span>Hecho con Astro <span class="orange">✳︎</span></span><a href={base}>Inicio ↗</a></footer>
+  <footer class="wrap"><Brand /><span>© {new Date().getFullYear()} SD Tech Systems · Juan Duque</span><span>Hecho con Astro <span class="orange">✳︎</span></span><a href={base}>Inicio ↗</a></footer>
   <script>
     const dialog=document.querySelector<HTMLDialogElement>('#capture-dialog');
     document.querySelector('#enlarge')?.addEventListener('click',()=>dialog?.showModal());

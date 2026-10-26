@@ -22,3 +22,7 @@ Tipografía principal del sistema. Subconjunto de símbolos DejaVu Sans en `src/
 ## Visibilidad
 
 El propietario autorizó conservar público el repositorio del portafolio el 26 de octubre de 2026. Esa autorización incluye sus descripciones y capturas; no cambia la visibilidad de los repositorios originales. GitHub Pages permanece sin activar hasta la revisión de la web.
+
+## Adaptación a SD Tech Systems
+
+Nombre facilitado por el propietario. Búsqueda en archivos del proyecto, GitHub, Drive y Notion sin encontrar una guía de identidad o logotipo oficial. Se usa un tratamiento tipográfico provisional y un favicon SD; se mantienen los colores del borrador anterior. No se presenta esta composición como reproducción de un logo oficial. Los proyectos conservan sus identidades y capturas originales.
