@@ -8,7 +8,7 @@ Revisión: 26 de octubre de 2026. Se seleccionaron los seis proyectos de softwar
 | OpenMultiPOS | `8929aee` | README, arquitectura, upstream.lock y manual | Imagen `home.png` del manual con datos ficticios, hash verificado contra el manifest original. |
 | EasyDrink | `4b9ae30` | README, `src/pages`, base local y versión | App React original, sesión local limpia con tienda ficticia y tutorial completado. Sin ventas o usuarios reales. |
 | akashic-tv | `36ccc89` | README, catálogo y pruebas de navegador | App original con seis títulos ficticios y sin proveedores. No se solicita reproducción ni metadata remota. |
-| private-event-demo | `demo` | README y sitio estático original | Vista local con todas las peticiones de imagen sustituidas por una ilustración genérica sin personas. Sin enviar RSVP ni acceder al panel de asistentes. |
+| private-event-demo | — | README y sitio estático original | Demostración anónima reconstruida con nombres, fechas y lugares de ejemplo; ilustración genérica sin personas. No utiliza datos ni fotografías del evento original. |
 | tasktone | `a9fcb02` | README, roadmap y portada Next.js | Portada original ejecutada localmente. Las funciones pendientes siguen identificadas como pendientes. |
 
 Las afirmaciones de instalación, impresión e integración pertenecen a la documentación de cada proyecto y se identifican como tales. Las capturas prueban el aspecto de la interfaz, no el funcionamiento completo del producto.
@@ -32,3 +32,7 @@ Los proyectos conservan sus identidades y capturas originales. Akashic Vault man
 ## Protección de fotografías de la invitación
 
 Por petición del propietario, la captura de boda publicada en el portafolio se regeneró sin ninguna fotografía de personas. Durante la captura todas las peticiones de imagen se sustituyen por una ilustración genérica de flores, anillos y papelería, creada para esta presentación. Las vistas previas y el ZIP se regeneran con la misma captura. Esta sustitución se aplica al portafolio; no modifica la invitación original ni su repositorio.
+
+## Anonimización del evento
+
+La demostración de boda se identifica genéricamente. La captura se construye con HTML independiente y datos ficticios, sin cargar el HTML del evento original, sus scripts, formularios, calendarios, ubicaciones, contactos o fotografías. No se publica una copia de la invitación operativa.

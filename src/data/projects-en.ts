@@ -1,5 +1,5 @@
 // English product content; original Spanish content lives in projects.ts.
-export const english: Record<string, { category: string; status: string; version: string; title: string; description: string; features: string[]; progress: string; capture: string }> = {
+export const english: Record<string, { name?: string; category: string; status: string; version: string; title: string; description: string; features: string[]; progress: string; capture: string }> = {
  'akashic-vault': {
   category:'Local AI · Desktop', status:'In development', version:'0.6.0-dev',
   title:'A space to think. A vault to keep it.',
@@ -33,12 +33,12 @@ export const english: Record<string, { category: string; status: string; version
   capture:'Original interface using a fictional local catalog, without contacting playback providers or playing media.',
  },
  invitacion:{
-  category:'Web experience · Event',status:'Under review',version:'First version',
+  name:'Wedding invitation', category:'Web experience · Event',status:'Under review',version:'First version',
   title:'An invitation that tells a story.',
   description:'A responsive Spanish wedding invitation with a burgundy and ivory visual direction. It combines the couple’s story, a gallery and tools for organizing attendance.',
   features:['Cover, story and a gallery with image enlargement.','Countdown, maps and calendar links.','Family RSVP with an individual record for each guest.','A form connected to Google Forms and a private Sheets dashboard.'],
   progress:'The first version is available for the couple’s review. Visual content and a custom domain remain subject to review. The portfolio does not include guest records or the private dashboard.',
-  capture:'Demonstration view with all original photographs replaced by a generic illustration without people. The RSVP form was not submitted.',
+  capture:'Anonymous demonstration with fictional names and details and a generic illustration without people. It does not depict a real event or submit forms.',
  },
  tasktone:{
   category:'Audio · Marketplace',status:'Prototype',version:'0.1.0',
