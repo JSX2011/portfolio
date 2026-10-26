@@ -24,7 +24,16 @@ jobs:
         env:
           PAGES_BASE: /portfolio/
           ASTRO_TELEMETRY_DISABLED: '1'
-      - run: npx playwright install --with-deps chromium
+      - name: Prepare browser for UI checks
+        shell: bash
+        run: |
+          for demo_browser in google-chrome google-chrome-stable chromium chromium-browser; do
+            if command -v "$demo_browser" >/dev/null 2>&1; then
+              echo "PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=$(command -v "$demo_browser")" >> "$GITHUB_ENV"
+              exit 0
+            fi
+          done
+          npx playwright install --with-deps chromium
       - run: npm run test:demos
       - uses: actions/configure-pages@v5
         with:
