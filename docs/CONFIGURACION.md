@@ -44,3 +44,5 @@ La ficha de boda debe usar únicamente nombres, fechas, horarios, lugares, conta
 ## Redacción pública
 
 Los textos renderizados deben dirigirse a clientes, posibles aliados e inversionistas: problema, utilidad, público objetivo, arquitectura, entrega y alcance. Las notas de revisión, procedimientos de prueba, manifest de capturas y seguimiento interno permanecen en la documentación técnica, no en las fichas ni en el pie del sitio. Mantén visibles los estados reales de desarrollo y las limitaciones que afectan la contratación. No añadas métricas de negocio, clientes, certificaciones, rentabilidades o funciones sin evidencia. La demo de asistencia debe conservar el aviso de que no registra respuestas.
+
+La invitación de boda se presenta como un proyecto finalizado y aprobado por el cliente, conforme a la confirmación del propietario. La muestra pública usa contenidos ficticios y un formulario local sin envío. Estos dos estados se describen por separado: producto entregado y muestra interactiva del portafolio. El campo opcional `inquiryLabel` de `client-details.ts` permite personalizar la llamada comercial de una ficha en cada idioma.

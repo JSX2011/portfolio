@@ -35,3 +35,7 @@ Pruebas sobre la compilación de producción, en español e inglés: campos obli
 ## Revisión editorial comercial
 
 Texto de interfaz y fichas revisado en español e inglés para visitantes externos. Retiradas las notas de revisión documental, narración de pruebas y aprobación interna. Mantenidos los estados de producto, las funciones pendientes, créditos y el aviso de la demo sin envío. Compilación y recorrido bilingüe comprobados, incluyendo filtros, fichas, cambio de idioma, texto al 150 %, accesibilidad y movimiento reducido. La invitación a clientes, aliados e inversionistas no incorpora métricas comerciales ni promesas de retorno.
+
+## Invitación como proyecto entregado
+
+Estado y versión actualizados a Finalizado/Proyecto entregado y Completed/Delivered project según la confirmación del propietario. Comprobadas tarjeta, ficha, texto de aprobación y llamada comercial en ambos idiomas. Comparados los datos de los demás productos para confirmar que sus estados no cambian. Se mantienen los contenidos anónimos y las pruebas de ausencia de solicitudes de red o almacenamiento de respuestas en la muestra de asistencia.

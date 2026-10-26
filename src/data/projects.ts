@@ -45,13 +45,13 @@ export const projects = [
   },
   {
     id: 'invitacion', name: 'Invitación de boda', category: 'Experiencia web · Evento', group: 'web', private: true,
-    status: 'Demostración', version: 'Diseño de referencia', year: '2026', image: 'invitation-demo-3a01c953b117.png', color: '#e6d4d4',
+    status: 'Finalizado', version: 'Proyecto entregado', year: '2026', image: 'invitation-demo-3a01c953b117.png', color: '#e6d4d4',
     title: 'Una invitación que cuenta una historia.',
-    description: 'Invitación de boda adaptable en español, con una dirección visual en burdeos y marfil. Combina la historia de la pareja, una galería y herramientas para organizar la asistencia.',
-    features: ['Portada, historia y galería con ampliación.', 'Cuenta regresiva, mapas y acceso a calendarios.', 'Confirmación familiar con registro individual por asistente.', 'Formulario de demostración local, sin envío ni almacenamiento de respuestas.'],
-    progress: 'Demostración interactiva de una invitación personalizada. Cada entrega se adapta al estilo del evento, sus contenidos y las integraciones acordadas. El formulario de esta muestra no registra asistencia real.',
+    description: 'Web de boda a medida, finalizada y aprobada por el cliente. Integra diseño adaptable, galería, información del evento y confirmación de asistencia en una experiencia personalizada.',
+    features: ['Portada, historia y galería con ampliación.', 'Cuenta regresiva, mapas y acceso a calendarios.', 'Confirmación familiar con registro individual por asistente.', 'Formulario de confirmación integrado en la experiencia del evento.'],
+    progress: 'Proyecto finalizado, revisado y aprobado por el cliente. Un ejemplo de desarrollo web a medida que puede adaptarse a otros eventos, estilos y necesidades.',
     stack: ['HTML', 'CSS', 'JavaScript', 'Cloudflare Workers'],
-    capture: 'Diseño de invitación con ilustración y datos de ejemplo.',
+    capture: 'Muestra del proyecto entregado con ilustración y datos ficticios para su presentación pública.',
     source: 'private-event-demo',
   },
   {

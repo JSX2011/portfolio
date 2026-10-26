@@ -33,12 +33,12 @@ export const english: Record<string, { name?: string; category: string; status: 
   capture:'Catalog browsing with sample titles.',
  },
  invitacion:{
-  name:'Wedding invitation', category:'Web experience · Event',status:'Demonstration',version:'Reference design',
+  name:'Wedding invitation', category:'Web experience · Event',status:'Completed',version:'Delivered project',
   title:'An invitation that tells a story.',
-  description:'A responsive Spanish wedding invitation with a burgundy and ivory visual direction. It combines the couple’s story, a gallery and tools for organizing attendance.',
-  features:['Cover, story and a gallery with image enlargement.','Countdown, maps and calendar links.','Family RSVP with an individual record for each guest.','A local demonstration form that does not send or store responses.'],
-  progress:'An interactive demonstration of a personalized invitation. Each delivery is tailored to the event’s style, content and agreed integrations. The sample form does not register real attendance.',
-  capture:'Invitation design with an illustration and sample details.',
+  description:'A custom wedding website, completed and approved by the client. It brings together responsive design, a gallery, event information and RSVP functionality in a personalized experience.',
+  features:['Cover, story and a gallery with image enlargement.','Countdown, maps and calendar links.','Family RSVP with an individual record for each guest.','An RSVP form integrated into the event experience.'],
+  progress:'A completed project, reviewed and approved by the client. An example of custom web development that can be adapted to other events, styles and requirements.',
+  capture:'A showcase of the delivered project with an illustration and fictional details for public presentation.',
  },
  tasktone:{
   category:'Audio · Marketplace',status:'Prototype',version:'0.1.0',
