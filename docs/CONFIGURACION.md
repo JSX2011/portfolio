@@ -30,3 +30,7 @@ Las capturas representan la interfaz original del producto: traducir el portafol
 ## GitHub Pages
 
 El destino previsto es `https://jsx2011.github.io/portfolio/`. La compilación para este destino necesita `PAGES_BASE=/portfolio/`; para revisar en localhost se puede omitir. El origen canónico se configura en `astro.config.mjs`. No añadas claves o servicios privados al código estático.
+
+## Privacidad de las demostraciones
+
+La ficha de boda debe usar únicamente nombres, fechas, horarios, lugares, contactos y datos de pago ficticios. La captura pública se construye con una demostración independiente; no cargues el HTML, las fotos, los formularios ni los calendarios de un evento real para regenerarla. No incluyas el nombre del repositorio privado del evento ni enlaces a sus servicios. Regenera también las capturas de presentación y el ZIP cuando cambies esta ficha. El contacto profesional del portafolio se conserva por indicación expresa del propietario.

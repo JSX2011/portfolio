@@ -16,3 +16,14 @@ Comprobado en Chromium local con Playwright:
 Compilación Astro: 22 páginas HTML, incluyendo compatibilidad con rutas originales y 404; además robots y sitemap bilingüe. Los enlaces y activos locales se revisan en la salida estática.
 
 Las pruebas no certifican accesibilidad universal ni el funcionamiento del backend, hardware o integraciones de los productos mostrados. El estado de publicación se comprueba por separado en GitHub Pages/Actions y con una petición al sitio desplegado.
+
+## Revisión de privacidad del evento
+
+- Captura de la invitación reconstruida desde HTML independiente con contenido ficticio e ilustración sin personas.
+- Nombre público y referencia del producto genéricos en español e inglés.
+- Vistas de presentación y ZIP regenerados con la misma captura anónima.
+- Historial Git local reescrito para sustituir las antiguas imágenes y archivos descargables y retirar los identificadores del evento de los textos.
+- Escaneo de todos los blobs de texto alcanzables del historial y comprobación de los binarios sustituidos.
+- El contacto profesional se conserva por petición del propietario.
+
+La retirada de artefactos y despliegues antiguos y la disponibilidad de objetos sin referencia en GitHub se verifican por separado. Una limpieza de Git no acredita la eliminación de cachés, copias externas o retenciones internas del proveedor.
