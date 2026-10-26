@@ -47,6 +47,7 @@ En PowerShell: `$env:PAGES_BASE='/portfolio/'; npm run build`.
 - Español: `/es/`; inglés: `/en/`. El selector mantiene el proyecto abierto.
 - Las categorías y asignaciones se editan en `src/data/catalog.ts`, sin tocar las plantillas.
 - Las fichas incluyen público objetivo, uso, construcción, arquitectura, plataforma, funciones, estado y consideraciones para contratar.
+- La foto y el botón de la invitación abren una web completa e interactiva: `/es/demos/invitacion/` y `/en/demos/invitacion/`. La ficha no contiene un formulario aislado. Todo el contenido de la demo es ficticio; la confirmación no envía ni guarda respuestas.
 - Guía de edición: [docs/CONFIGURACION.md](docs/CONFIGURACION.md).
 - El panel de accesibilidad permite texto de hasta 150 %, contraste, espaciado, subrayado de enlaces y reducción de movimiento. Respeta la preferencia del sistema y guarda ajustes solo en el navegador.
 - Las capturas se enderezan y se elevan como una hoja al pasar el puntero o enfocar con teclado. El movimiento se desactiva cuando se solicita reducirlo.

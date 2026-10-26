@@ -37,9 +37,9 @@ La ficha de boda debe usar únicamente nombres, fechas, horarios, lugares, conta
 
 ## Formulario de boda: demostración sin envío
 
-`src/components/RsvpDemo.astro` permite añadir/quitar personas, validar campos y probar la confirmación en ambos idiomas. No contiene URL de destino, iframe, llamadas de red ni almacenamiento de respuestas. La confirmación es explícitamente una simulación y los datos se borran al reiniciar o recargar. Sin JavaScript, el botón de confirmación permanece deshabilitado.
+La ficha de boda no contiene un formulario. Su imagen y el botón «Ver sitio interactivo» abren una página independiente en `/{idioma}/demos/invitacion/`. Esta página permite recorrer la invitación completa, incluida una confirmación simulada que no envía ni guarda respuestas. Los datos se borran al reiniciar; sin JavaScript el envío permanece deshabilitado. Consulta `docs/DEMO_INTERACTIVA.md` para su mantenimiento.
 
-`SiteLayout.astro` bloquea formularios e iframes mediante Content Security Policy (`form-action 'none'`, `frame-src 'none'`). En producción también bloquea conexiones iniciadas por scripts (`connect-src 'none'`). No conviertas esta demostración en un formulario operativo ni añadas servicios de invitados reales al portafolio.
+`SiteLayout.astro` bloquea formularios e iframes mediante Content Security Policy (`form-action 'none'`, `frame-src 'none'`). En producción también bloquea conexiones iniciadas por scripts (`connect-src 'none'`). La demo independiente aplica las mismas restricciones. No conviertas esta demostración en un formulario operativo ni añadas servicios de invitados reales al portafolio.
 
 ## Redacción pública
 

@@ -39,3 +39,9 @@ Texto de interfaz y fichas revisado en español e inglés para visitantes extern
 ## Invitación como proyecto entregado
 
 Estado y versión actualizados a Finalizado/Proyecto entregado y Completed/Delivered project según la confirmación del propietario. Comprobadas tarjeta, ficha, texto de aprobación y llamada comercial en ambos idiomas. Comparados los datos de los demás productos para confirmar que sus estados no cambian. Se mantienen los contenidos anónimos y las pruebas de ausencia de solicitudes de red o almacenamiento de respuestas en la muestra de asistencia.
+
+## Demo de invitación como página completa
+
+La ficha ya no contiene el formulario aislado. En portada, la imagen y el enlace abren la demo; en la ficha funcionan la imagen y «Ver sitio interactivo». Verificadas las versiones española e inglesa: secciones completas, historia animada, cuenta regresiva, galería con navegación y ampliación, mapas locales ilustrativos con zoom, descarga ICS con fecha y lugares ficticios, preferencias de accesibilidad y navegación de retorno/cambio de idioma.
+
+Probadas confirmación familiar y declinación, validación, selección de personas y menús, reinicio y ausencia de peticiones de red o almacenamiento de respuestas. Envío deshabilitado sin JavaScript. Revisión a 360, 390, 768 y 1440 px con ajustes de lectura ampliados. Sin errores JavaScript ni recursos externos durante el recorrido. Las fotos de la muestra son ilustraciones/imágenes genéricas generadas, sin personas.

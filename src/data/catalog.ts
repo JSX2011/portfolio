@@ -24,3 +24,6 @@ export const siteConfig = {
   github: 'https://github.com/JSX2011',
   defaultLocale: 'es' as Locale,
 };
+
+// Routes to full, anonymous product showcases (relative to each language root).
+export const interactiveDemos: Record<string,string> = { invitacion: 'demos/invitacion/' };

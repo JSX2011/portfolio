@@ -45,7 +45,7 @@ export const projects = [
   },
   {
     id: 'invitacion', name: 'Invitación de boda', category: 'Experiencia web · Evento', group: 'web', private: true,
-    status: 'Finalizado', version: 'Proyecto entregado', year: '2026', image: 'invitation-demo-3a01c953b117.png', color: '#e6d4d4',
+    status: 'Finalizado', version: 'Proyecto entregado', year: '2026', image: 'wedding-interactive-be7539825df8.png', color: '#e6d4d4',
     title: 'Una invitación que cuenta una historia.',
     description: 'Web de boda a medida, finalizada y aprobada por el cliente. Integra diseño adaptable, galería, información del evento y confirmación de asistencia en una experiencia personalizada.',
     features: ['Portada, historia y galería con ampliación.', 'Cuenta regresiva, mapas y acceso a calendarios.', 'Confirmación familiar con registro individual por asistente.', 'Formulario de confirmación integrado en la experiencia del evento.'],
