@@ -51,7 +51,7 @@ export const projects = [
     features: ['Portada, historia y galería con ampliación.', 'Cuenta regresiva, mapas y acceso a calendarios.', 'Confirmación familiar con registro individual por asistente.', 'Formulario conectado con Google Forms y un panel privado en Sheets.'],
     progress: 'Primera versión disponible para revisión de la pareja. El contenido visual y el dominio propio siguen sujetos a revisión. La vista del portafolio no incluye registros de invitados ni el panel privado.',
     stack: ['HTML', 'CSS', 'JavaScript', 'Cloudflare Workers'],
-    capture: 'Captura local de la interfaz de la invitación. No se envió el formulario de asistencia.',
+    capture: 'Vista de demostración con las fotografías originales sustituidas por una ilustración genérica sin personas. No se envió el formulario de asistencia.',
     source: 'private-event-demo',
   },
   {

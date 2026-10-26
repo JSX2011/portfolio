@@ -8,7 +8,7 @@ Revisión: 26 de octubre de 2026. Se seleccionaron los seis proyectos de softwar
 | OpenMultiPOS | `8929aee` | README, arquitectura, upstream.lock y manual | Imagen `home.png` del manual con datos ficticios, hash verificado contra el manifest original. |
 | EasyDrink | `4b9ae30` | README, `src/pages`, base local y versión | App React original, sesión local limpia con tienda ficticia y tutorial completado. Sin ventas o usuarios reales. |
 | akashic-tv | `36ccc89` | README, catálogo y pruebas de navegador | App original con seis títulos ficticios y sin proveedores. No se solicita reproducción ni metadata remota. |
-| private-event-demo | `demo` | README y sitio estático original | Portada servida desde `public/`, sin enviar RSVP ni acceder al panel de asistentes. |
+| private-event-demo | `demo` | README y sitio estático original | Vista local con todas las peticiones de imagen sustituidas por una ilustración genérica sin personas. Sin enviar RSVP ni acceder al panel de asistentes. |
 | tasktone | `a9fcb02` | README, roadmap y portada Next.js | Portada original ejecutada localmente. Las funciones pendientes siguen identificadas como pendientes. |
 
 Las afirmaciones de instalación, impresión e integración pertenecen a la documentación de cada proyecto y se identifican como tales. Las capturas prueban el aspecto de la interfaz, no el funcionamiento completo del producto.
@@ -28,3 +28,7 @@ El propietario autorizó conservar público el repositorio del portafolio el 26 
 Kit oficial `SD_Tech_Systems_Branding.zip`, identidad v1.1 del 21 de octubre de 2026, proporcionado por el propietario en esta conversación. Se revisaron la guía PDF de siete páginas, los textos de identidad y continuidad, los tokens y la firma de software. Los logos y favicon maestros sustituyen la composición provisional. Se conservan proporciones, zona de protección y tamaños mínimos; los colores y las familias tipográficas proceden del kit. Las fuentes se convierten de TTF a WOFF sin alterar sus dibujos. No se incorpora la imagen de campaña generada con IA ni las plantillas internas.
 
 Los proyectos conservan sus identidades y capturas originales. Akashic Vault mantiene su identidad de producto y la relación comercial existente con SD Tech Imports. OpenMultiPOS conserva su atribución a ERPNext, Frappe y X POS; EasyDrink se identifica como adaptación de FreeKasir.
+
+## Protección de fotografías de la invitación
+
+Por petición del propietario, la captura de boda publicada en el portafolio se regeneró sin ninguna fotografía de personas. Durante la captura todas las peticiones de imagen se sustituyen por una ilustración genérica de flores, anillos y papelería, creada para esta presentación. Las vistas previas y el ZIP se regeneran con la misma captura. Esta sustitución se aplica al portafolio; no modifica la invitación original ni su repositorio.

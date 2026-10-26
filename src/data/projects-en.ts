@@ -38,7 +38,7 @@ export const english: Record<string, { category: string; status: string; version
   description:'A responsive Spanish wedding invitation with a burgundy and ivory visual direction. It combines the couple’s story, a gallery and tools for organizing attendance.',
   features:['Cover, story and a gallery with image enlargement.','Countdown, maps and calendar links.','Family RSVP with an individual record for each guest.','A form connected to Google Forms and a private Sheets dashboard.'],
   progress:'The first version is available for the couple’s review. Visual content and a custom domain remain subject to review. The portfolio does not include guest records or the private dashboard.',
-  capture:'Local screenshot of the invitation interface. The RSVP form was not submitted.',
+  capture:'Demonstration view with all original photographs replaced by a generic illustration without people. The RSVP form was not submitted.',
  },
  tasktone:{
   category:'Audio · Marketplace',status:'Prototype',version:'0.1.0',
