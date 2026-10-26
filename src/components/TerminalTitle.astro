@@ -1,0 +1,17 @@
+---
+const { first, second } = Astro.props as { first: string; second: string };
+const lastLine = Array.from(second);
+---
+<script is:inline>
+  // Hide only while the animation initializes. Failed scripts reveal the full title.
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches && !document.documentElement.hasAttribute('data-motion')) {
+    document.documentElement.dataset.terminalBoot = 'pending';
+    window.setTimeout(() => {
+      if (document.documentElement.dataset.terminalBoot === 'pending') delete document.documentElement.dataset.terminalBoot;
+    }, 1600);
+  }
+</script>
+<h1 id="titulo" class="terminal-heading" aria-label={`${first} ${second}`} data-terminal-state="complete"><span aria-hidden="true"><span data-terminal-line>{Array.from(first).map(letter => <span data-terminal-char>{letter}</span>)}</span><br/><em data-terminal-line>{lastLine.map((letter, index) => <span data-terminal-char data-caret={index === lastLine.length - 1 ? 'after' : undefined}>{letter}</span>)}</em></span></h1>
+<script>
+  import '../scripts/terminal-title';
+</script>

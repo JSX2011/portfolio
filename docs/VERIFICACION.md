@@ -57,3 +57,11 @@ Probadas confirmación familiar y declinación, validación, selección de perso
 - Regresión del portafolio bilingüe: **PASS** en filtros, doce fichas, idiomas, texto ampliado y efectos. Regresión completa de la boda: **PASS**, sin cambios en su código, anonimización ni confirmación local.
 - Vista descargable regenerada con módulos de cada página agrupados e incluidos en sus HTML, conservando fuentes, imágenes y audio locales. Las diez rutas de software empaquetadas se probaron con servidor estático, sus interacciones y audio: **PASS**, sin recursos externos ni solicitudes fallidas. La comprobación no certifica el comportamiento del protocolo `file:` en todos los navegadores.
 - El workflow de Pages ejecuta el build y `npm run test:demos` antes de publicar. Las pruebas verifican las muestras; no validan ni ejecutan los backends, IA, proveedores, pagos, hardware o funciones pendientes de los productos originales.
+
+## Título con escritura de terminal — 26 de octubre de 2026
+
+- Escritura secuencial de ambas frases, con cursor durante el recorrido y guion bajo titilante al terminar. Funciona en español, inglés y la portada española de compatibilidad.
+- Verificación de navegador: **PASS** en móvil (390 px) y escritorio (1440 px), escritura progresiva real, cursor final, repetición tras refrescar y nombre accesible completo durante toda la animación. La altura del título y la posición del bloque siguiente permanecen iguales antes y después de escribir.
+- Texto al 100 % y 150 % en 360, 390, 768 y 1440 px: **PASS**, sin desbordamiento. Preferencia del sistema, preferencia guardada y activación de «Reducir movimiento» a mitad de escritura: **PASS**; el texto se completa de inmediato y el cursor deja de titilar.
+- JavaScript desactivado y fallo simulado de los módulos: **PASS**, el encabezado completo sigue disponible. El efecto no persiste estado ni cambia datos de los proyectos.
+- Compilación Astro, TypeScript estricto del script y regresión del portafolio bilingüe: **PASS**. Capturas y versión descargable actualizadas.

@@ -27,6 +27,8 @@ Las capturas de las demos representan interfaces adaptadas o reconstruidas con d
 
 `Motion.astro` añade apariciones discretas al entrar en pantalla. El CSS aplica la extracción y enderezado de la captura tanto al pasar el puntero como al enfocar con teclado. La preferencia de movimiento reducido del dispositivo y el panel desactivan los efectos. No se ofrece una certificación de accesibilidad.
 
+El título principal escribe sus dos frases como una terminal al abrir o refrescar la portada y deja un cursor de guion bajo titilando al terminar. Los textos siguen en `src/i18n.ts`; `TerminalTitle.astro` conserva el encabezado completo para lectura asistida y reserva su espacio. `src/scripts/terminal-title.ts` permite ajustar el intervalo entre caracteres (55 ms), la pausa entre frases (260 ms) y el comienzo (180 ms). El cursor se configura con `terminal-wait` en `src/styles.css` (1,1 s). El efecto no guarda estado ni se repite al desplazarse. Al reducir movimiento se muestra todo el texto de inmediato y el cursor queda fijo; sin JavaScript o si falla el módulo, el título sigue visible.
+
 ## GitHub Pages
 
 El destino previsto es `https://jsx2011.github.io/portfolio/`. La compilación para este destino necesita `PAGES_BASE=/portfolio/`; para revisar en localhost se puede omitir. El origen canónico se configura en `astro.config.mjs`. No añadas claves o servicios privados al código estático.
