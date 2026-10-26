@@ -2,9 +2,11 @@
 
 Portafolio en español construido con **Astro 5**, salida estática y JavaScript mínimo. Incluye seis proyectos públicos y privados, capturas reales de sus interfaces, funciones, tecnologías y estado de desarrollo.
 
-**Estado: revisión privada. GitHub Pages no está activado y no hay ningún workflow de publicación activo.**
+**Estado: sitio en revisión. El repositorio es público por decisión del propietario; GitHub Pages no está activado y no hay ningún workflow de publicación activo.**
 
 ![Vista de escritorio](docs/preview-desktop.png)
+
+Puedes revisar también la [captura móvil](docs/preview-mobile.png) o descargar [la vista previa completa](docs/vista-previa.zip): descomprime el ZIP y abre `index.html`. Incluye las siete páginas, filtros y ampliación de capturas, sin instalar Astro ni usar un servidor.
 
 ## Revisar localmente
 
@@ -44,7 +46,7 @@ En PowerShell: `$env:PAGES_BASE='/portfolio/'; npm run build`.
 
 El archivo `docs/github-pages.yml.example` prepara el despliegue, pero está inactivo. Solo después de aprobar la publicación:
 
-1. Definir la visibilidad del repositorio y revisar las capturas y el contacto.
+1. Revisar las capturas y el contacto. La visibilidad pública del repositorio ya fue autorizada.
 2. Retirar el aviso de revisión y decidir si conservar `noindex` en ambas plantillas.
 3. Activar Pages con origen GitHub Actions.
 4. Copiar el ejemplo a `.github/workflows/pages.yml` y ejecutarlo manualmente.

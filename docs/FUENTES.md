@@ -18,3 +18,7 @@ No se copiaron fuentes de proyectos privados, certificados, claves, registros de
 ## Recursos
 
 Tipografía principal del sistema. Subconjunto de símbolos DejaVu Sans en `src/assets/symbols.ttf`, con licencia en `public/fonts/LICENSE.txt`. Las capturas corresponden a interfaces de los proyectos del propietario y preservan las atribuciones de sus bases; EasyDrink se identifica como adaptación de FreeKasir.
+
+## Visibilidad
+
+El propietario autorizó conservar público el repositorio del portafolio el 26 de octubre de 2026. Esa autorización incluye sus descripciones y capturas; no cambia la visibilidad de los repositorios originales. GitHub Pages permanece sin activar hasta la revisión de la web.
