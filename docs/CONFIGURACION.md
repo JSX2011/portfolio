@@ -40,3 +40,7 @@ La ficha de boda debe usar únicamente nombres, fechas, horarios, lugares, conta
 `src/components/RsvpDemo.astro` permite añadir/quitar personas, validar campos y probar la confirmación en ambos idiomas. No contiene URL de destino, iframe, llamadas de red ni almacenamiento de respuestas. La confirmación es explícitamente una simulación y los datos se borran al reiniciar o recargar. Sin JavaScript, el botón de confirmación permanece deshabilitado.
 
 `SiteLayout.astro` bloquea formularios e iframes mediante Content Security Policy (`form-action 'none'`, `frame-src 'none'`). En producción también bloquea conexiones iniciadas por scripts (`connect-src 'none'`). No conviertas esta demostración en un formulario operativo ni añadas servicios de invitados reales al portafolio.
+
+## Redacción pública
+
+Los textos renderizados deben dirigirse a clientes, posibles aliados e inversionistas: problema, utilidad, público objetivo, arquitectura, entrega y alcance. Las notas de revisión, procedimientos de prueba, manifest de capturas y seguimiento interno permanecen en la documentación técnica, no en las fichas ni en el pie del sitio. Mantén visibles los estados reales de desarrollo y las limitaciones que afectan la contratación. No añadas métricas de negocio, clientes, certificaciones, rentabilidades o funciones sin evidencia. La demo de asistencia debe conservar el aviso de que no registra respuestas.

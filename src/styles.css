@@ -1283,3 +1283,7 @@ h2,h3{overflow-wrap:anywhere}
 .demo-actions button:disabled,.demo-remove:disabled{opacity:.55;cursor:default}
 .demo-result{margin-top:20px;min-height:1.8em;line-height:1.8;color:var(--sd-cyan);font-size:.95rem}
 @media(max-width:600px){.demo-guest{grid-template-columns:minmax(0,1fr);padding:16px}.rsvp-demo h2{font-size:1.5rem}}
+
+.collaboration-copy{max-width:760px;margin:24px 0 35px}
+.collaboration-copy h3{font-size:1.4rem;line-height:1.5;margin-bottom:14px}
+.collaboration-copy p{font-size:1rem;line-height:1.9;color:var(--muted)}

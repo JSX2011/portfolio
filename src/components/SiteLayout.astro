@@ -31,7 +31,7 @@ const url=(lang:string)=>new URL(`${base}${lang}/${suffix}`,Astro.site).href;
 <body>
   <a class="skip" href="#contenido">{t.skip}</a>
   <slot />
-  <footer class="wrap"><Brand href={`${base}${locale}/`}/><div class="footer-signature"><span>{t.signature}</span><span>© {new Date().getFullYear()} {siteConfig.author}</span></div><span>{t.built}</span><a href="#">{t.top} ↑</a></footer>
+  <footer class="wrap"><Brand href={`${base}${locale}/`}/><div class="footer-signature"><span>{t.signature}</span><span>© {new Date().getFullYear()} {siteConfig.author}</span></div><a href="#">{t.top} ↑</a></footer>
   <Accessibility locale={locale}/><Motion />
 </body>
 </html>
