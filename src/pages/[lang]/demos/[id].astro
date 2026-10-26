@@ -1,0 +1,7 @@
+---
+import SoftwareDemo from '../../../components/SoftwareDemo.astro';
+import {demoKinds} from '../../../data/catalog';
+import {locales} from '../../../i18n';
+export function getStaticPaths(){return locales.flatMap(locale=>Object.keys(demoKinds).filter(id=>id!=='invitacion').map(id=>({params:{lang:locale,id},props:{locale,id}})));}
+---
+<SoftwareDemo {...Astro.props}/>

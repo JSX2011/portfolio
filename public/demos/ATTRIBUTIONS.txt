@@ -1,0 +1,32 @@
+SD Tech Systems — Interactive portfolio showcases / Muestras interactivas
+
+These static showcases are separate from the products and use fictional data.
+They do not include product backends, production data, credentials, AI engines,
+media providers or operational integrations.
+
+Akashic Vault: visual reconstruction authorized by the product owner for this
+portfolio. Original product remains proprietary; no original product source is
+distributed in this showcase.
+
+OpenMultiPOS: presentation adapted from the owner's OpenMultiPOS administrative
+workspace. Original project built on ERPNext, Frappe and X POS. The adapted
+OpenMultiPOS presentation is available as source in JSX2011/portfolio under
+GNU GPL v3; license: ../licenses/OpenMultiPOS-GPL-3.0.txt. Original source:
+https://github.com/JSX2011/OpenMultiPOS
+
+EasyDrink: independently implemented visual reconstruction of the owner's
+EasyDrink adaptation of FreeKasir. Upstream: Copyright (c) 2025 KasirGratisan,
+MIT License; notice: ../licenses/EasyDrink-MIT.txt. Original source:
+https://github.com/JSX2011/EasyDrink
+
+Akashic TV: independently implemented visual reconstruction authorized by the
+owner. All sample titles and poster artwork are fictional. No providers,
+private builds, keys or original product source are distributed here.
+
+TaskTone: adapted landing-page presentation; the order workspace is an
+independently implemented conceptual showcase of the planned workflow, not a
+claim that the prototype has completed its backend. Original MIT notice:
+../licenses/TaskTone-MIT.txt. Source: https://github.com/JSX2011/tasktone
+
+Sample audio, poster illustrations and demo fixtures were created for this
+portfolio. Fonts retain the licenses in ../fonts/.

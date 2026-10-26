@@ -13,7 +13,7 @@ Revisión: 26 de octubre de 2026. Se seleccionaron los seis proyectos de softwar
 
 Las afirmaciones de instalación, impresión e integración pertenecen a la documentación de cada proyecto y se identifican como tales. Las capturas prueban el aspecto de la interfaz, no el funcionamiento completo del producto.
 
-No se copiaron fuentes de proyectos privados, certificados, claves, registros de invitados o bases de datos al repositorio del portafolio. Se incluyen únicamente las descripciones y capturas solicitadas.
+No se copiaron fuentes operativas de proyectos privados, certificados, claves, registros de invitados o bases de datos al repositorio del portafolio. Las reconstrucciones de interfaz son independientes; las adaptaciones de proyectos públicos conservan las atribuciones y licencias.
 
 ## Recursos
 
@@ -36,3 +36,11 @@ Por petición del propietario, la captura de boda publicada en el portafolio se 
 ## Anonimización del evento
 
 La demostración de boda se identifica genéricamente. La captura se construye con HTML independiente y datos ficticios, sin cargar el HTML del evento original, sus scripts, formularios, calendarios, ubicaciones, contactos o fotografías. No se publica una copia de la invitación operativa.
+
+## Demos de software y nuevas capturas
+
+Por solicitud del propietario se añaden cinco recorridos interactivos estáticos en español e inglés. OpenMultiPOS adapta la estructura/paleta del panel administrativo revisado; TaskTone adapta la portada y reconstruye un espacio conceptual de encargos. EasyDrink, Akashic Vault y Akashic TV se reconstruyen visualmente siguiendo las interfaces y capturas inspeccionadas. No son copias de las aplicaciones operativas ni convierten sus funciones pendientes en capacidades completadas.
+
+Las nuevas capturas de las tarjetas proceden de esas demos ejecutadas en Chromium, con fixtures ficticios. Las capturas originales ya anonimizadas se conservan como evidencia y por compatibilidad de URLs. Consulta `docs/DEMOS_SOFTWARE.md` y `public/demos/ATTRIBUTIONS.txt` para conocer el alcance de cada muestra.
+
+Los carteles de TV son ilustraciones geométricas originales hechas con CSS y títulos inventados. El estudio de Vault muestra un paisaje preparado con CSS; su video es una animación visual simulada. El breve WAV de TaskTone se sintetizó localmente para esta demo y no contiene voces ni material de terceros. Todos los recursos se alojan junto al sitio.

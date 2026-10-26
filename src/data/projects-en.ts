@@ -6,7 +6,7 @@ export const english: Record<string, { name?: string; category: string; status: 
   description:'A Windows desktop application combining local AI assistants with an encrypted vault. Once models are installed, chat can run without an account or cloud services.',
   features:['Chat with local models and different assistance modes.','Encrypted history with access tied to the original USB drive.','Image generation and, in the Max edition, silent video generation.','Engine installation from USB or through a consented download.'],
   progress:'In development for Windows, with Lite, Pro and Max editions. Commercial distribution and the update system are in preparation.',
-  capture:'The Akashic Vault workspace. Demonstration view.',
+  capture:'Interactive workspace reconstruction with sample conversations.',
  },
  openmultipos:{
   category:'Business management · ERP',status:'In development',version:'Local integration',
@@ -14,7 +14,7 @@ export const english: Record<string, { name?: string; category: string; status: 
   description:'A self-hosted administration workspace built on ERPNext, Frappe and X POS. It brings together sales, inventory, purchases and finances for two businesses while keeping their documents, stock and accounts separate.',
   features:['Business selection, profiles and permissions.','Sales, inventory, purchases, customers and team management.','A combined basket with a separate invoice per business and an internal receipt.','Native online checkout, backups and local recovery.'],
   progress:'Local integration in development for administration and point of sale. DIAN electronic invoicing and offline operation are not included in the current version. Portable and installable delivery is in preparation.',
-  capture:'Administration dashboard with sample data.',
+  capture:'Demo dashboard adapted from the administration workspace, with fictional data.',
  },
  'easy-drink':{
   category:'Point of sale · PWA',status:'Evolving',version:'Web + Android',
@@ -22,7 +22,7 @@ export const english: Record<string, { name?: string; category: string; status: 
   description:'An offline point-of-sale adaptation based on FreeKasir. A shared codebase supports a PWA and an Android application, with local storage and Spanish/English interfaces.',
   features:['Checkout, discounts, payments and open bills.','Products, barcodes and inventory.','Customers, suppliers, expenses, debts and reports.','PIN-based users, backups and thermal printing.'],
   progress:'An evolving point of sale for web and Android, with local storage and Spanish/English interfaces. Printer and device setup is defined for each implementation.',
-  capture:'Sales dashboard with sample data.',
+  capture:'Reconstructed demo interface with fictional products and sales.',
  },
  'akashic-tv':{
   category:'Entertainment · Smart TV',status:'Alpha',version:'0.2.5',
@@ -30,7 +30,7 @@ export const english: Record<string, { name?: string; category: string; status: 
   description:'A private application for Samsung Tizen TVs, designed for browsing movies and series using a remote control. It includes a Spanish-language catalog, title details and playback provider selection.',
   features:['Search by title or person, with genre and year filters.','Title details, credits, seasons and episodes.','Remote-control navigation and provider switching.','Subtitle preferences and an audio panel.'],
   progress:'An alpha for Samsung Tizen. Favorites, resume and external subtitles are planned for later stages. Playback depends on providers and the TV; 4K/HDR is not guaranteed.',
-  capture:'Catalog browsing with sample titles.',
+  capture:'Reconstructed interactive catalog with fictional titles and artwork.',
  },
  invitacion:{
   name:'Wedding invitation', category:'Web experience · Event',status:'Completed',version:'Delivered project',
@@ -46,6 +46,6 @@ export const english: Record<string, { name?: string; category: string; status: 
   description:'A marketplace prototype intended to connect creators with audio professionals. It proposes a workflow from file upload to review and delivery.',
   features:['Responsive web interface.','Authentication and separate creator/professional roles.','Prisma data schema and an API foundation.','A proposed workflow for audio-processing commissions.'],
   progress:'A prototype with a web interface, authentication and an API foundation. Next stages include audio uploads, messaging, payments and commission tracking to complete the marketplace workflow.',
-  capture:'Homepage of the audio marketplace concept.',
+  capture:'Interactive concept: an adapted homepage and proposed audio-order workflow.',
  },
 };

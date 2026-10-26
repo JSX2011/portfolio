@@ -26,4 +26,14 @@ export const siteConfig = {
 };
 
 // Routes to full, anonymous product showcases (relative to each language root).
-export const interactiveDemos: Record<string,string> = { invitacion: 'demos/invitacion/' };
+export const demoKinds = {
+  'akashic-vault': 'reconstructed', openmultipos: 'adapted', 'easy-drink': 'reconstructed',
+  'akashic-tv': 'reconstructed', tasktone: 'concept', invitacion: 'adapted',
+} as const;
+export const interactiveDemos: Record<string,string> = Object.fromEntries(
+  Object.keys(demoKinds).map(id=>[id,`demos/${id}/`]),
+);
+export type SoftwareDemoId = Exclude<keyof typeof demoKinds, 'invitacion'>;
+export const demoLabel = (id:string,locale:Locale) => id==='invitacion'
+  ? (locale==='es'?'Ver sitio interactivo':'Explore interactive website')
+  : (locale==='es'?'Explorar demo':'Explore demo');

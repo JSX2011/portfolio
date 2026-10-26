@@ -19,7 +19,7 @@ Para añadir un producto, usa un ID único en `projects.ts`, añade su traducci�
 
 `/es/` y `/en/` contienen las portadas. Las fichas se generan bajo `/{idioma}/proyectos/{id}/`. El selector conserva el producto al cambiar de idioma. `/` y las rutas originales `/proyectos/{id}/` conservan la versión española por compatibilidad; sus enlaces canónicos apuntan a `/es/`.
 
-Las capturas representan la interfaz original del producto: traducir el portafolio no implica que cada producto tenga los dos idiomas. La disponibilidad lingüística del producto se describe en su ficha.
+Las capturas de las demos representan interfaces adaptadas o reconstruidas con datos ficticios. Las demos están disponibles en ambos idiomas; esto no implica que el producto original tenga la misma disponibilidad lingüística. Su alcance se describe en la ficha.
 
 ## Accesibilidad y movimiento
 
@@ -32,6 +32,10 @@ Las capturas representan la interfaz original del producto: traducir el portafol
 El destino previsto es `https://jsx2011.github.io/portfolio/`. La compilación para este destino necesita `PAGES_BASE=/portfolio/`; para revisar en localhost se puede omitir. El origen canónico se configura en `astro.config.mjs`. No añadas claves o servicios privados al código estático.
 
 ## Privacidad de las demostraciones
+
+Los seis productos tienen una ruta independiente configurable mediante `interactiveDemos` en `src/data/catalog.ts`. `demoLabel` define las etiquetas ES/EN; `demoKinds` distingue adaptación, reconstrucción y concepto. La imagen y el botón abren la demo; el nombre del producto abre la ficha comercial. Consulta `docs/DEMOS_SOFTWARE.md` para los cinco recorridos de software y `docs/DEMO_INTERACTIVA.md` para la invitación.
+
+Las muestras de software mantienen sus cambios solo en memoria y ofrecen «Reiniciar demo». No añadas endpoints, bases de datos, IndexedDB, service workers, analítica, formularios operativos ni credenciales a estos recorridos. Las preferencias de accesibilidad son el único estado persistente permitido.
 
 La ficha de boda debe usar únicamente nombres, fechas, horarios, lugares, contactos y datos de pago ficticios. La captura pública se construye con una demostración independiente; no cargues el HTML, las fotos, los formularios ni los calendarios de un evento real para regenerarla. No incluyas el nombre del repositorio privado del evento ni enlaces a sus servicios. Regenera también las capturas de presentación y el ZIP cuando cambies esta ficha. El contacto profesional del portafolio se conserva por indicación expresa del propietario.
 

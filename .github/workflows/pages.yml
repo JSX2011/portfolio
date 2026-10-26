@@ -24,6 +24,8 @@ jobs:
         env:
           PAGES_BASE: /portfolio/
           ASTRO_TELEMETRY_DISABLED: '1'
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:demos
       - uses: actions/configure-pages@v5
         with:
           enablement: true
