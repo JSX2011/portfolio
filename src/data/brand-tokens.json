@@ -1,0 +1,21 @@
+{
+  "brand": "SD Tech Systems",
+  "parent": "SD Tech",
+  "version": "1.1",
+  "symbol": "SD>_",
+  "date": "2026-10-21",
+  "tagline": "Software claro. Confianza real.",
+  "colors": {
+    "navy": "#061C45",
+    "cyan": "#00BDE8",
+    "ink": "#07111F",
+    "blue": "#2563EB",
+    "white": "#F4F8FC",
+    "muted": "#A7B9CD"
+  },
+  "fonts": {
+    "brand": "DejaVu Sans Bold",
+    "body": "DejaVu Sans",
+    "code": "DejaVu Sans Mono"
+  }
+}

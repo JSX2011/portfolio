@@ -17,7 +17,7 @@ No se copiaron fuentes de proyectos privados, certificados, claves, registros de
 
 ## Recursos
 
-Tipografía principal del sistema. Subconjunto de símbolos DejaVu Sans en `src/assets/symbols.ttf`, con licencia en `public/fonts/LICENSE.txt`. Las capturas corresponden a interfaces de los proyectos del propietario y preservan las atribuciones de sus bases; EasyDrink se identifica como adaptación de FreeKasir.
+Tipografías DejaVu Sans regular y bold y DejaVu Sans Mono del kit oficial, convertidas a WOFF para la web y alojadas en `src/assets/`. Licencia conservada en `public/fonts/LICENSE.txt`. Las capturas corresponden a interfaces de los proyectos del propietario y preservan las atribuciones de sus bases; EasyDrink se identifica como adaptación de FreeKasir.
 
 ## Visibilidad
 
@@ -25,4 +25,6 @@ El propietario autorizó conservar público el repositorio del portafolio el 26 
 
 ## Adaptación a SD Tech Systems
 
-Nombre facilitado por el propietario. Búsqueda en archivos del proyecto, GitHub, Drive y Notion sin encontrar una guía de identidad o logotipo oficial. Se usa un tratamiento tipográfico provisional y un favicon SD; se mantienen los colores del borrador anterior. No se presenta esta composición como reproducción de un logo oficial. Los proyectos conservan sus identidades y capturas originales.
+Kit oficial `SD_Tech_Systems_Branding.zip`, identidad v1.1 del 21 de octubre de 2026, proporcionado por el propietario en esta conversación. Se revisaron la guía PDF de siete páginas, los textos de identidad y continuidad, los tokens y la firma de software. Los logos y favicon maestros sustituyen la composición provisional. Se conservan proporciones, zona de protección y tamaños mínimos; los colores y las familias tipográficas proceden del kit. Las fuentes se convierten de TTF a WOFF sin alterar sus dibujos. No se incorpora la imagen de campaña generada con IA ni las plantillas internas.
+
+Los proyectos conservan sus identidades y capturas originales. Akashic Vault mantiene su identidad de producto y la relación comercial existente con SD Tech Imports. OpenMultiPOS conserva su atribución a ERPNext, Frappe y X POS; EasyDrink se identifica como adaptación de FreeKasir.

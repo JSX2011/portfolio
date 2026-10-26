@@ -61,4 +61,6 @@ No se ha publicado el sitio, habilitado Pages ni modificado la visibilidad de lo
 
 ## Identidad visual
 
-SD Tech Systems aparece en portada, navegación, fichas, pie, metadatos y favicon. El componente `src/components/Brand.astro` centraliza el tratamiento tipográfico. No se encontraron activos oficiales de marca en las fuentes conectadas: el tratamiento de texto y favicon son provisionales, y se conserva la paleta marfil, grafito y naranja del primer borrador hasta disponer del logo o guía oficial.
+Identidad oficial SD Tech Systems v1.1, proporcionada en `SD_Tech_Systems_Branding.zip`. Se utilizan sus PNG maestros sin alterar, la paleta navy/cian/ink/azul/blanco/gris, las fuentes DejaVu Sans y Mono alojadas localmente y los iconos oficiales. El logo horizontal conserva al menos 220 px en escritorio; en móvil se muestra el símbolo de 64 px. El lema es «Software claro. Confianza real.» y la firma «Desarrollado por SD Tech Systems · Parte de SD Tech».
+
+`src/components/Brand.astro` centraliza el logo adaptable. Los tokens originales están en `src/data/brand-tokens.json` y las decisiones de aplicación en [docs/IDENTIDAD.md](docs/IDENTIDAD.md). Los nombres, capturas, créditos y licencias de los productos conservan su identidad propia.

@@ -11,9 +11,10 @@ const base = import.meta.env.BASE_URL;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="SD Tech Systems — Portafolio de desarrollo de Juan Duque: inteligencia artificial local, herramientas de gestión y experiencias web." />
     <meta name="robots" content="noindex, nofollow" />
-    <meta name="theme-color" content="#f5f3ed" />
-    <title>SD Tech Systems — Software con propósito</title>
-    <link rel="icon" href={`${base}favicon.svg`} type="image/svg+xml" />
+    <meta name="theme-color" content="#07111F" />
+    <title>SD Tech Systems — Software claro. Confianza real.</title>
+    <link rel="icon" href={`${base}favicon.ico`} sizes="any" />
+    <link rel="icon" href={`${base}favicon-32.png`} type="image/png" sizes="32x32" />
   </head>
   <body>
     <a class="skip" href="#contenido">Saltar al contenido</a>
@@ -24,9 +25,9 @@ const base = import.meta.env.BASE_URL;
     </header>
     <main id="contenido">
       <section class="hero wrap" aria-labelledby="titulo">
-        <div class="hero-top"><p class="eyebrow"><span class="tiny-cross">✳︎</span> SD TECH SYSTEMS / DESARROLLO DE SOFTWARE</p><p class="hero-index">PORTAFOLIO<br />2025 — 2026</p></div>
-        <h1 id="titulo">Ideas que se<br />convierten en <em>software.</em><span class="hero-star" aria-hidden="true">✳︎</span></h1>
-        <div class="hero-bottom"><p>De una IA que vive en tu equipo a herramientas que mueven un negocio. Construyo soluciones para necesidades reales.</p><a class="round-link" href="#proyectos"><span>Explora mis proyectos</span><span class="circle" aria-hidden="true">↓</span></a></div>
+        <div class="hero-top"><p class="eyebrow"><span class="terminal-cursor" aria-hidden="true">&gt;_</span> DESARROLLO DE SOFTWARE / PARTE DE SD TECH</p><p class="hero-index">PORTAFOLIO<br />2025 — 2026</p></div>
+        <h1 id="titulo">Software claro.<br /><em>Confianza real.</em></h1>
+        <div class="hero-bottom"><p>Software libre, comercial y a medida. De una IA que vive en tu equipo a herramientas que ayudan a gestionar tu negocio.</p><a class="round-link" href="#proyectos"><span>Explora mis proyectos</span><span class="circle" aria-hidden="true">↓</span></a></div>
         <div class="hero-line"><span>IA LOCAL</span><span aria-hidden="true">/</span><span>APLICACIONES DE GESTIÓN</span><span aria-hidden="true">/</span><span>EXPERIENCIAS WEB</span><span class="line-end">DISEÑAR. CONSTRUIR. MEJORAR.</span></div>
       </section>
       <section id="proyectos" class="projects-section wrap" aria-labelledby="proyectos-titulo">
@@ -46,10 +47,10 @@ const base = import.meta.env.BASE_URL;
         </div>
         <p class="catalog-note">Los proyectos privados se presentan mediante descripciones y capturas de interfaz. Su código fuente permanece privado.</p>
       </section>
-      <section id="sobre-mi" class="about-section"><div class="wrap about-grid"><div><p class="eyebrow">02 / SD TECH SYSTEMS</p><h2>Detrás del código<span>.</span></h2><Brand decorative /></div><div class="about-copy"><p class="about-lead">Soy Juan Duque. Me interesa convertir problemas cotidianos en herramientas que se puedan usar.</p><p>SD Tech Systems es la identidad con la que presento mis proyectos de inteligencia artificial local, gestión de negocios y experiencias web. Desde una aplicación de escritorio hasta una interfaz para televisión, cada uno parte de un contexto distinto.</p><p>Este portafolio muestra tanto las ideas que están tomando forma como las que ya tienen una interfaz funcional. El estado y los próximos pasos de cada proyecto forman parte de su historia.</p><div class="about-tags"><span>IA y privacidad</span><span>Web y escritorio</span><span>Herramientas de negocio</span></div></div></div></section>
+      <section id="sobre-mi" class="about-section"><div class="wrap about-grid"><div><p class="eyebrow">02 / SD TECH SYSTEMS</p><h2>Detrás del código<span>.</span></h2><Brand decorative /><p class="brand-family">Parte de SD Tech</p></div><div class="about-copy"><p class="about-lead">Soy Juan Sebastián Duque Valencia. Desarrollo software útil, claro y fácil de usar.</p><p>SD Tech Systems es la marca de desarrollo de software de SD Tech. Trabajo en soluciones de inteligencia artificial local, gestión de negocios y experiencias web, con enfoque en privacidad, claridad y mantenimiento.</p><p>Este portafolio muestra tanto las ideas que están tomando forma como las que ya tienen una interfaz funcional. Cada proyecto conserva su identidad, sus créditos y una descripción concreta de su estado.</p><div class="about-tags"><span>Claridad</span><span>Privacidad</span><span>Responsabilidad</span><span>Calidad y apertura</span></div></div></div></section>
       <section id="contacto" class="contact-section wrap"><p class="eyebrow">03 / CONECTEMOS</p><div class="contact-heading"><h2>Todo empieza<br />con una <em>idea.</em></h2><a href="mailto:jsduquevalencia96@gmail.com" class="contact-arrow" aria-label="Escribir un correo a Juan Duque">↗</a></div><div class="contact-links"><a href="mailto:jsduquevalencia96@gmail.com">jsduquevalencia96@gmail.com ↗</a><a href="https://github.com/JSX2011" target="_blank" rel="noopener noreferrer">GitHub / JSX2011 ↗</a></div></section>
     </main>
-    <footer class="wrap"><Brand href="#" /><span>© {new Date().getFullYear()} SD Tech Systems · Juan Duque</span><span>Hecho con Astro <span class="orange">✳︎</span></span><a href="#">Volver arriba ↑</a></footer>
+    <footer class="wrap"><Brand href="#" /><div class="footer-signature"><span>Desarrollado por SD Tech Systems · Parte de SD Tech</span><span>© {new Date().getFullYear()} Juan Sebastián Duque Valencia</span></div><span>Hecho con Astro</span><a href="#">Volver arriba ↑</a></footer>
     <script>
       const buttons = document.querySelectorAll<HTMLButtonElement>('[data-filter]');
       buttons.forEach(button => button.addEventListener('click', () => {
