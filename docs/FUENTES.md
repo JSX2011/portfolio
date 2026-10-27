@@ -1,6 +1,6 @@
 # Fuentes y capturas
 
-Revisión: 26 de octubre de 2026. Se seleccionaron los seis proyectos de software y experiencias web más recientes de la cuenta conectada JSX2011. Los repositorios de aprendizaje anteriores quedan fuera de esta selección.
+Revisión: 26 de octubre de 2026. Se seleccionaron los seis proyectos de software y experiencias web más recientes de la cuenta conectada SDTechSystems. Los repositorios de aprendizaje anteriores quedan fuera de esta selección.
 
 | Proyecto | Revisión de origen | Evidencia principal | Captura |
 | --- | --- | --- | --- |

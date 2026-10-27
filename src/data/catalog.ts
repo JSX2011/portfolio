@@ -21,7 +21,7 @@ export const siteConfig = {
   name: 'SD Tech Systems',
   author: 'Juan Sebastián Duque Valencia',
   email: 'jsduquevalencia96@gmail.com',
-  github: 'https://github.com/JSX2011',
+  github: 'https://github.com/SDTechSystems',
   defaultLocale: 'es' as Locale,
 };
 

@@ -31,7 +31,7 @@ El título principal escribe sus dos frases como una terminal al abrir o refresc
 
 ## GitHub Pages
 
-El destino previsto es `https://jsx2011.github.io/portfolio/`. La compilación para este destino necesita `PAGES_BASE=/portfolio/`; para revisar en localhost se puede omitir. El origen canónico se configura en `astro.config.mjs`. No añadas claves o servicios privados al código estático.
+El destino previsto es `https://sdtechsystems.github.io/portfolio/`. La compilación para este destino necesita `PAGES_BASE=/portfolio/`; para revisar en localhost se puede omitir. El origen canónico se configura en `astro.config.mjs`. No añadas claves o servicios privados al código estático.
 
 ## Privacidad de las demostraciones
 
