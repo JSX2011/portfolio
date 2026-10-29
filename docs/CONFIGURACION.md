@@ -31,7 +31,7 @@ El título principal escribe sus dos frases como una terminal al abrir o refresc
 
 ## GitHub Pages
 
-El destino previsto es `https://sdtechsystems.github.io/portfolio/`. La compilación para este destino necesita `PAGES_BASE=/portfolio/`; para revisar en localhost se puede omitir. El origen canónico se configura en `astro.config.mjs`. No añadas claves o servicios privados al código estático.
+El destino publicado es `https://sdtechsystems.dev/`, con `www.sdtechsystems.dev` redirigido al dominio principal. La compilación usa la raíz `/` sin definir `PAGES_BASE`; para revisar en localhost se usa la misma configuración. El dominio personalizado se configura en Settings → Pages de GitHub y los registros DNS de Cloudflare apuntan a GitHub Pages con proxy desactivado (DNS only). El origen canónico se configura en `astro.config.mjs`. No añadas claves o servicios privados al código estático.
 
 ## Privacidad de las demostraciones
 

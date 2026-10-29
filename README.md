@@ -2,7 +2,7 @@
 
 Portafolio de software y desarrollo web de SD Tech Systems. Presenta soluciones para ventas, administración de negocios, asistentes de IA locales y sitios a medida, con información en español e inglés.
 
-[Visitar el portafolio](https://sdtechsystems.github.io/portfolio/)
+[Visitar el portafolio](https://sdtechsystems.dev/)
 
 ![Vista del portafolio en escritorio](docs/preview-desktop.png)
 
@@ -14,7 +14,7 @@ Las demostraciones permiten recorrer una caja, administrar inventario de ejemplo
 
 Las demos usan datos ficticios y conservan los cambios en memoria. No procesan pagos, ejecutan modelos de IA ni envían confirmaciones reales. Sus funciones ilustran el producto; cada ficha indica el alcance de la aplicación correspondiente.
 
-El sitio se adapta a móviles y permite ajustar tamaño de texto, contraste, espaciado, enlaces y movimiento. Está disponible en [español](https://sdtechsystems.github.io/portfolio/es/) e [inglés](https://sdtechsystems.github.io/portfolio/en/).
+El sitio se adapta a móviles y permite ajustar tamaño de texto, contraste, espaciado, enlaces y movimiento. Está disponible en [español](https://sdtechsystems.dev/es/) e [inglés](https://sdtechsystems.dev/en/).
 
 ## Ejecutar el sitio
 
@@ -48,7 +48,7 @@ Los proyectos se editan en `src/data/projects.ts` y `src/data/projects-en.ts`. L
 - [Funcionamiento de las demos](docs/DEMOS_SOFTWARE.md).
 - [Vista móvil](docs/preview-mobile.png) y [copia navegable sin instalación](docs/vista-previa.zip).
 
-Para comprobar las demos, instalar Chromium con `npx playwright install chromium`, compilar con `PAGES_BASE=/portfolio/ npm run build` y ejecutar `npm run test:demos`.
+Para comprobar las demos, instalar Chromium con `npx playwright install chromium`, compilar con `npm run build` y ejecutar `npm run test:demos`.
 
 ## Licencia
 

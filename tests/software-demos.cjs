@@ -4,7 +4,7 @@ const assert = require("node:assert/strict");
 const fs = require("node:fs");
 const { spawn } = require("node:child_process");
 const path = require("node:path");
-const base = process.env.DEMO_TEST_BASE || "http://127.0.0.1:4455/portfolio/";
+const base = process.env.DEMO_TEST_BASE || "http://127.0.0.1:4455/";
 const ids = (
   process.env.DEMO_TEST_IDS ||
   "akashic-vault,openmultipos,easy-drink,akashic-tv,tasktone"
