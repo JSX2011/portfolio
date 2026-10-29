@@ -20,7 +20,7 @@ export const assignments: Record<string, string[]> = {
 export const siteConfig = {
   name: 'SD Tech Systems',
   author: 'Juan Sebastián Duque Valencia',
-  email: 'jsduquevalencia96@gmail.com',
+  email: 'contacto@sdtechsystems.dev',
   github: 'https://github.com/SDTechSystems',
   defaultLocale: 'es' as Locale,
 };
